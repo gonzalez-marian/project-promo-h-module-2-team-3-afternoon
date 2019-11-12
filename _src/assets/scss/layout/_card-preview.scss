@@ -8,6 +8,31 @@
         border-radius: 15px;
         background-color: $silver;
         font-family: $openSans-font;
+        font-size: 0.75rem;
+        line-height: 20px;
         color: $gunmetal;
+    }
+
+    &_card{
+        margin-left: 45px;
+        margin-right: 35px;
+        background-color: $white-full;
+
+        &-name{
+            text-transform: capitalize;
+            font-family: $montserrat-font;
+            font-weight: $bold-weight;
+            font-size: 1.125rem;
+            line-height: 20px;
+            color: $dark-green-blue;
+        }
+        
+        &-job{
+            font-family: $montserrat-font;
+            font-weight: $regular-weight;
+            font-size: 1rem;
+            line-height: 20px;
+            color: $gunmetal;
+        }
     }
 }
