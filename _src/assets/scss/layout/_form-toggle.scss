@@ -1,0 +1,121 @@
+fieldset{
+    border: none;
+}
+.form-toggle{
+    background-image: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+}
+.form-title{
+    font-family: $openSans-font;
+    font-size: 1.125rem;
+    font-weight: $semiBold-weight;
+    color: $gunmetal;
+}
+.form-icon{
+    color: $dull-orange;
+}
+.fa-chevron-down{
+    color: $gunmetal;
+}
+.color{
+    p{
+        font-family: $openSans-font;
+        font-size: 0.875rem;
+        color: $gunmetal;
+    }
+}
+.color-theme{
+    display: inline;
+    li{
+        width: 30px;
+        height: 25px;
+        display: inline-block;
+    }
+}
+.color-theme-item1{
+    background-color: $dark-green-blue;
+}
+.color-theme-item2{
+    background-color: $dirty-blue;
+}
+.color-theme-item3{
+    background-color: $hospital-green;
+}
+.color-theme-item4{
+    background-color: $dried-blood;
+}
+.color-theme-item5{
+    background-color: $rusty-red;
+}
+.color-theme-item6{
+    background-color: $tomato;
+}
+.color-theme-item7{
+    background-color: $slate;
+}
+.color-theme-item8{
+    background-color: $faded-orange;
+}
+.color-theme-item9{
+    background-color: $light-grey-blue;
+}
+.fill-input{
+    font-family: $openSans-font;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: $dark-green-blue;
+    display: block;
+}
+.form-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn-add-image{
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    background-color: $dull-orange;
+    font-family: $openSans-font;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: #ffffff;
+}
+.preview-image{
+    width: 30px;
+    height: 30px;
+    border: solid 1px $hospital-green;
+    display: inline-block;
+}
+.btn-create-card{
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    background-color: $dull-orange;
+    color: #ffffff;
+    &:disabled{
+        background-color: rgba(0, 0, 0, 0.32);
+    }
+}
+.twitter-link{
+    span{
+        font-family: $openSans-font;
+        font-size: 1.125rem;
+        font-weight: $semiBold-weight;
+        color: $gunmetal;
+    }
+    a{
+        width: 181px;
+        height: 30px;
+        display: block;
+        border-radius: 3px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+        background-color: $azure;
+        font-family: $openSans-font;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: #ffffff;
+        text-align: center;
+    }
+}
