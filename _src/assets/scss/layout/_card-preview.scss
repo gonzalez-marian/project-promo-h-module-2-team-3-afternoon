@@ -1,0 +1,13 @@
+.preview{
+    background-image: linear-gradient($silver , $pale-grey);
+
+    .reset{
+        width: 75px;
+        height: 30px;
+        border: solid 1px $white-full;
+        border-radius: 15px;
+        background-color: $silver;
+        font-family: $openSans-font;
+        color: $gunmetal;
+    }
+}
