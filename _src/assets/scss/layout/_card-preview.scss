@@ -73,3 +73,18 @@
         }
     }
 }
+
+@media all and (min-width: 768px){
+
+    .preview{
+        
+        .reset{
+            margin-top: 173px;
+        }
+    
+        &_card{
+            width: 240px;
+            height: 329px;
+        }
+    }   
+}
