@@ -1,9 +1,11 @@
 .preview{
     background-image: linear-gradient($silver , $pale-grey);
-
+    height: 100vh;
     .reset{
         width: 75px;
         height: 30px;
+        margin-top: 38px;
+        margin-left: 45px;
         border: solid 1px $white-full;
         border-radius: 15px;
         background-color: $silver;
@@ -11,11 +13,11 @@
         font-size: 0.75rem;
         line-height: 20px;
         color: $gunmetal;
+        text-transform: uppercase;
     }
 
     &_card{
-        margin-left: 45px;
-        margin-right: 35px;
+        margin: 20px 35px 40px 45px;
         background-color: $white-full;
 
         &-name{
@@ -25,6 +27,8 @@
             font-size: 1.125rem;
             line-height: 20px;
             color: $dark-green-blue;
+            padding-top: 21px;
+            padding-left: 20px;
         }
         
         &-job{
@@ -33,13 +37,32 @@
             font-size: 1rem;
             line-height: 20px;
             color: $gunmetal;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        /* QUITAR ESTO CUANDO ESTE EN EL NORMALIZE*/
+        ul{
+            list-style: none;
         }
 
         &-social{
             display: flex;
-            justify-content: space-around;
-            margin-left: 20px;
-            margin-right: 52px;
+            justify-content: flex-start;
+            padding: 0px;
+            margin: 10px 52px 12px 20px;
+
+            .item{
+                border: solid 2px $hospital-green;
+                border-radius: 50%;
+                padding: 6px 9px;
+                margin-right: 10px;
+                margin-bottom: 12px;
+                color: $dark-green-blue;
+                text-align: center;
+                align-self: center;
+                
+            }
         }
     }
 }
