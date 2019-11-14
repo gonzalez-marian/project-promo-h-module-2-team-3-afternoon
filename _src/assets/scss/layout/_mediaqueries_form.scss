@@ -2,13 +2,13 @@
 
 @media all and (min-width: 768px){
     .main{
-        height: 100vh;
+        /*height: 100vh;*/
         display: flex;
         flex-direction: row-reverse;
         padding: 0 40px;
     }
     .preview{
-        width: 329px;
+        width: 329px; /*50%*/
         height: auto;
         margin-top: 23px;
         margin-bottom: 21px;
@@ -20,12 +20,17 @@
     }  
     
     .form-wrapper{
-        width: 55%;
+        width: 55%; /*50%*/
         margin: 0;
         padding-right: 30px;
     }
 }
 
 @media all and (min-width: 1024px){
-    
+    .preview{
+        width: 60%;
+    }
+    .form-wrapper{
+        width: 40%;
+    }
 }

@@ -6,6 +6,7 @@
 .preview{
     background-image: linear-gradient($silver , $pale-grey);
     height: 80vh;
+    
     .reset{
         width: 75px;
         height: 30px;
@@ -93,14 +94,14 @@
 }
 .fieldset{
     border-bottom: 1px solid $white-two;
-    padding-bottom: 30px;
-    padding-top: 20px;
+    padding: 20px 0 30px;
 }
 .form-title-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
 }
 .form-title{
     @include text-open-18-600;
@@ -165,8 +166,7 @@
     @include text-open-14;
     color: $dark-green-blue;
     display: block;
-    margin-top: 20px;
-    margin-bottom: 7px;
+    margin: 20px auto 7px;
 }
 .input{
     width: 100%;
@@ -202,6 +202,12 @@
     flex-direction: column;
     align-items: center;
 }
+.create-card{
+    width: 100%;
+    border-bottom: 1px solid $white-two;
+    display: flex;
+    justify-content: center;
+}
 .btn-create-card{
     width: 199px;
     height: 50px;
@@ -215,14 +221,17 @@
     }
 }
 .twitter-link{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    span{
+    border-bottom: 1px solid $white-two;
+    .twitter-message{
+        margin-top: 20px;
         @include text-open-18-600;
         color: $gunmetal;
     }
-    a{
+    .twitter-btn{
         width: 181px;
         height: 30px;
         display: block;
@@ -233,6 +242,6 @@
         @include text-open-14;
         color: #ffffff;
         text-align: center;
-        margin: 15px auto;
+        margin: 20px auto 30px;
     }
 }

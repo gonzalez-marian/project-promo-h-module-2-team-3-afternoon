@@ -36,7 +36,7 @@
                 <legend class="form-title"><i class="far fa-object-ungroup form-icon"></i>DISEÑA</legend>
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="design__hidden">
+            <div class="design">
                 <div class="color">
                     <p>COLORES</p>
                     <div class="color-palettes">
@@ -76,25 +76,29 @@
                 <legend class="form-title"><i class="far fa-keyboard form-icon"></i>RELLENA</legend>
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="fill-in__hidden">
+            <div class="fill-in">
                 <label class="input-label" for="name">Nombre completo</label>
                 <input class="input" placeholder="Ej: Sandra Navarro" type="text" name="name" id="name">
+
                 <label class="input-label" for="job-title">Puesto</label>
-                <input class="input" placeholder="Ej: Programadora Front-end" type="text" name="job-title"
-                    id="job-title">
+                <input class="input" placeholder="Ej: Programadora Front-end" type="text" name="job-title" id="job-title">
+
                 <label class="input-label" for="photo">Imagen de perfil</label>
                 <input type="file" name="photo" id="photo" value="Añadir imagen">
                 <div class="add-image-container">
                     <button class="btn-add-image">Añadir imagen</button>
                     <div class="preview-image"></div>
                 </div>
+
                 <label class="input-label" for="email">Email</label>
                 <input class="input" placeholder="Ej:sandra-navarro@gmail.com" type="email" name="email" id="email">
+
                 <label class="input-label" for="tel">Teléfono</label>
                 <input class="input" placeholder="Ej: 724678594" type="tel" name="tel" id="tel">
+
                 <label class="input-label" for="linkedin">LinkedIn</label>
-                <input class="input" placeholder="Ej: https://www.linkedin.com/in/sandra-navarro" type="text"
-                    name="linkedin" id="linkedin">
+                <input class="input" placeholder="Ej: https://www.linkedin.com/in/sandra-navarro" type="text" name="linkedin" id="linkedin">
+
                 <label class="input-label" for="github">Github</label>
                 <input class="input" placeholder="Ej: @sandra-navarro" type="text" name="github" id="github">
             </div>
@@ -105,11 +109,12 @@
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
             <div class="share__hidden">
-                <button class="btn-create-card"><i class="far fa-address-card"> CREAR TARJETA</i>
-                </button>
+                <div class="create-card">
+                    <button class="btn-create-card"><i class="far fa-address-card"> CREAR TARJETA</i></button>
+                </div>
                 <div class="twitter-link">
-                    <span>La tarjeta ha sido creada:</span>
-                    <a href=""><i class="fab fa-twitter"></i>Compartir en twitter</a>
+                    <span class="twitter-message">La tarjeta ha sido creada:</span>
+                    <a href="" class="twitter-btn"><i class="fab fa-twitter"></i>Compartir en twitter</a>
                 </div>
             </div>
         </fieldset>
