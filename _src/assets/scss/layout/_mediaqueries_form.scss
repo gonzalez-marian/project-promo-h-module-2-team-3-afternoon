@@ -1,0 +1,33 @@
+
+
+@media all and (min-width: 768px){
+    .main{
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .preview{
+        width: auto;
+        .reset{
+            margin-top: 173px;
+        }
+    
+        &_card{
+            width: 240px;
+            height: 329px;
+        }
+    }  
+    
+    .form-wrapper{
+        width: auto;
+    }
+    
+
+
+
+
+}
+
+@media all and (min-width: 1024px){
+    
+}
