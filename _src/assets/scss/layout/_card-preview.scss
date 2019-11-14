@@ -1,0 +1,94 @@
+.preview{
+    background-image: linear-gradient($silver , $pale-grey);
+    height: 100vh;
+    .reset{
+        width: 75px;
+        height: 30px;
+        margin-top: 38px;
+        margin-left: 45px;
+        border: solid 1px $white-full;
+        border-radius: 15px;
+        background-color: $silver;
+        font-family: $openSans-font;
+        font-size: 0.75rem;
+        line-height: 20px;
+        color: $gunmetal;
+        text-transform: uppercase;
+    }
+
+    &_card{
+        margin: 20px 35px 40px 45px;
+        background-color: $white-full;
+
+        &-name{
+            text-transform: capitalize;
+            font-family: $montserrat-font;
+            font-weight: $bold-weight;
+            font-size: 1.125rem;
+            line-height: 20px;
+            color: $dark-green-blue;
+            padding-top: 21px;
+            padding-left: 20px;
+        }
+        
+        &-job{
+            font-family: $montserrat-font;
+            font-weight: $regular-weight;
+            font-size: 1rem;
+            line-height: 20px;
+            color: $gunmetal;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        /* QUITAR ESTO CUANDO ESTE EN EL NORMALIZE*/
+        ul{
+            list-style: none;
+        }
+
+        &-social{
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: center;
+            height: 50px;
+            padding-right: 62px;
+            padding-left: 20px;
+
+            .item{
+                height: 32px;
+
+                &_btn{
+                    border: solid 2px $hospital-green;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    margin: 0px 5px 15px 5px;
+                    color: $dark-green-blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px){
+
+    .preview{
+        
+        .reset{
+            margin-top: 173px;
+        }
+    
+        &_card{
+            width: 240px;
+            height: 329px;
+        }
+    }   
+}
+
+@media all and (min-width: 1024px){
+    
+}
