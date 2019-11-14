@@ -2,12 +2,17 @@
 
 @media all and (min-width: 768px){
     .main{
+        height: 100vh;
         display: flex;
         flex-direction: row-reverse;
-        
+        padding: 0 40px;
     }
     .preview{
-        width: auto;
+        width: 329px;
+        height: auto;
+        margin-top: 23px;
+        margin-bottom: 21px;
+
         .reset{
             margin-top: 173px;
         }
@@ -19,13 +24,12 @@
     }  
     
     .form-wrapper{
-        width: auto;
+        width: 55%;
+        margin: 0;
+        padding-right: 30px;
+        margin-top: 23px;
     }
     
-
-
-
-
 }
 
 @media all and (min-width: 1024px){
