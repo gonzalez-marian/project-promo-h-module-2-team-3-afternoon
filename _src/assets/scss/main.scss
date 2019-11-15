@@ -9,7 +9,6 @@
 // Layout
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/card-preview';
 @import 'layout/form-toggle';
 
 // Pages
@@ -18,6 +17,7 @@
 
 // Components
 //@import 'components/hero';
+@import 'layout/mediaqueries_form';
 
 body {
 	
