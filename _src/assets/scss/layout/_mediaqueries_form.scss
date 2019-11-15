@@ -29,6 +29,14 @@
 @media all and (min-width: 1024px){
     .preview{
         width: 60%;
+
+        .reset{
+            transform: translateX(181%);
+        }
+
+        &_card{
+            transform: translateX(56%);
+        }
     }
     .form-wrapper{
         width: 40%;
