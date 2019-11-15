@@ -1,5 +1,9 @@
 .landing_wrapper {
     height: 100vh;
+}
+.landing-main_wrapper {
+    background-color: $white;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,30 +14,43 @@
     &__img {
         width: 100%;
     }
-    @media all and (min-width:768px){
+    @include for-tablet-up{
+        margin-top: 350px;
         width: 419px;
     }
 }
 .ldng-text {
     text-align: center;
     margin: 35.4px 0 17.8px;
+    @include for-tablet-up{
+        margin: 31px 0 27px;
+    }
+
     &__title {
         margin:0;
+       
         color: $dull-orange;
         font-family: $merri-font;
         font-weight: $black-weight;
         font-size: 19.2px;
         line-height: 24px;
+        @include for-tablet-up{
+            font-size: 24px;
+            line-height: 31px;
+        }
     }
     &__expl {
         margin:0;
+        max-width: 265px;
+       
         color: $dark-green-blue;
         font-family: $openSans-font;
         font-weight: $semiBold-weight;
         font-size: 12.8px;
         line-height: normal;
-
-        max-width: 265px;
+        @include for-tablet-up{
+            font-size: 16px;
+        }
     }
 }
 .ldng-chartIcons {
@@ -43,6 +60,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;  
+    .ldng-icon {
+        color: $dull-orange;
+        height: 26px;
+        @include for-tablet-up{
+            height: 29px;
+        }
+    }
     &__text {
         text-transform: capitalize;
         // Misma tipografía q &__expl salvo color
@@ -51,15 +75,15 @@
         font-weight: $semiBold-weight;
         font-size: 12.8px;
         line-height: normal;
+        @include for-tablet-up{
+            font-size: 16px;
+        }
     }
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    
-    
+    }   
 }
 
 .ldng-btn {
@@ -74,7 +98,9 @@
     font-weight: $semiBold-weight;
     font-size: 16px;
     line-height: 22px;
-
+    @include for-tablet-up{
+        margin: 186px 0 59px 0;
+    }
 
 
 }
