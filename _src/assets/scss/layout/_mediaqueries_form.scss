@@ -8,7 +8,7 @@
         padding: 0 40px;
     }
     .preview{
-        width: 329px; /*50%*/
+        width: 80%;
         height: auto;
         margin-top: 23px;
         margin-bottom: 21px;
@@ -20,7 +20,7 @@
     }  
     
     .form_wrapper{
-        width: 55%; /*50%*/
+        min-width: 400px;
         margin: 0;
         padding-right: 30px;
     }
