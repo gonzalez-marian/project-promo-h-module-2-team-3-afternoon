@@ -111,12 +111,12 @@
     font-weight: $semiBold-weight;
     font-size: rem(16);
     line-height: rem(22);
+    text-align: center;
+    padding: 10px;
     @include for-tablet-up{
         margin: 186px 0 59px 0;
     }
     @include for-desktop-up{
         margin: 74px 0 56px 0;
     }
-
-
 }
