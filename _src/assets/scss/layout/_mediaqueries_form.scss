@@ -8,7 +8,7 @@
         padding: 0 40px;
     }
     .preview{
-        width: 329px; /*50%*/
+        width: 80%;
         height: auto;
         margin-top: 23px;
         margin-bottom: 21px;
@@ -19,8 +19,8 @@
         }
     }  
     
-    .form-wrapper{
-        width: 55%; /*50%*/
+    .form_wrapper{
+        min-width: 400px;
         margin: 0;
         padding-right: 30px;
     }
@@ -38,7 +38,7 @@
             transform: translateX(56%);
         }
     }
-    .form-wrapper{
+    .form_wrapper{
         width: 40%;
         margin: auto;
     }

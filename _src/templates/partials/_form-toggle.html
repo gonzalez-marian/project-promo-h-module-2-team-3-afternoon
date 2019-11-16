@@ -30,41 +30,41 @@
         </div>
     </section>
 
-    <form action="" method="get" class="form-wrapper">
+    <form action="" method="get" class="form_wrapper">
         <fieldset class="fieldset">
-            <div class="form-title-container">
-                <legend class="form-title"><i class="far fa-object-ungroup form-icon"></i>DISEÑA</legend>
+            <div class="form_title-container">
+                <legend class="form_title"><i class="far fa-object-ungroup form_title-icon"></i>DISEÑA</legend>
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
             <div class="design">
                 <div class="color">
-                    <p>COLORES</p>
-                    <div class="color-palettes">
+                    <p class="color_title">COLORES</p>
+                    <div class="color_palettes">
                         <div>
                             <label for="palette-1"></label>
-                            <input type="radio" name="color-palette" id="palette-1">
-                            <ul class="color-theme">
-                                <li class="color-theme-item1"></li>
-                                <li class="color-theme-item2"></li>
-                                <li class="color-theme-item3"></li>
+                            <input type="radio" name="color-palette" id="palette-1" class="palette-1">
+                            <ul class="color_theme">
+                                <li class="color_theme-item1 items"></li>
+                                <li class="color_theme-item2 items"></li>
+                                <li class="color_theme-item3 items"></li>
                             </ul>
                         </div>
                         <div>
                             <label for="palette-2"></label>
-                            <input type="radio" name="color-palette" id="palette-2">
-                            <ul class="color-theme">
-                                <li class="color-theme-item4"></li>
-                                <li class="color-theme-item5"></li>
-                                <li class="color-theme-item6"></li>
+                            <input type="radio" name="color-palette" id="palette-2" class="palette-2">
+                            <ul class="color_theme">
+                                <li class="color_theme-item4 items"></li>
+                                <li class="color_theme-item5 items"></li>
+                                <li class="color_theme-item6 items"></li>
                             </ul>
                         </div>
                         <div>
                             <label for="palette-3"></label>
-                            <input type="radio" name="color-palette" id="palette-3">
-                            <ul class="color-theme">
-                                <li class="color-theme-item7"></li>
-                                <li class="color-theme-item8"></li>
-                                <li class="color-theme-item9"></li>
+                            <input type="radio" name="color-palette" id="palette-3" class="palette-3">
+                            <ul class="color_theme">
+                                <li class="color_theme-item7 items"></li>
+                                <li class="color_theme-item8 items"></li>
+                                <li class="color_theme-item9 items"></li>
                             </ul>
                         </div>
                     </div>
@@ -72,49 +72,49 @@
             </div>
         </fieldset>
         <fieldset class="fieldset">
-            <div class="form-title-container">
-                <legend class="form-title"><i class="far fa-keyboard form-icon"></i>RELLENA</legend>
+            <div class="form_title-container">
+                <legend class="form_title"><i class="far fa-keyboard form_title-icon"></i>RELLENA</legend>
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
             <div class="fill-in">
-                <label class="input-label" for="name">Nombre completo</label>
+                <label class="input_label" for="name">Nombre completo</label>
                 <input class="input" placeholder="Ej: Sandra Navarro" type="text" name="name" id="name">
 
-                <label class="input-label" for="job-title">Puesto</label>
+                <label class="input_label" for="job-title">Puesto</label>
                 <input class="input" placeholder="Ej: Programadora Front-end" type="text" name="job-title"
                     id="job-title">
 
-                <label class="input-label" for="photo">Imagen de perfil</label>
-                <input type="file" name="photo" id="photo" value="Añadir imagen">
+                <label class="input_label" for="photo">Imagen de perfil</label>
+                <input type="file" name="photo" id="photo" class="photo" value="Añadir imagen">
                 <div class="add-image-container">
                     <button class="btn-add-image">Añadir imagen</button>
                     <div class="preview-image"></div>
                 </div>
 
-                <label class="input-label" for="email">Email</label>
+                <label class="input_label" for="email">Email</label>
                 <input class="input" placeholder="Ej:sandra-navarro@gmail.com" type="email" name="email" id="email">
 
-                <label class="input-label" for="tel">Teléfono</label>
+                <label class="input_label" for="tel">Teléfono</label>
                 <input class="input" placeholder="Ej: 724678594" type="tel" name="tel" id="tel">
 
-                <label class="input-label" for="linkedin">LinkedIn</label>
+                <label class="input_label" for="linkedin">LinkedIn</label>
                 <input class="input" placeholder="Ej: https://www.linkedin.com/in/sandra-navarro" type="text"
                     name="linkedin" id="linkedin">
 
-                <label class="input-label" for="github">Github</label>
+                <label class="input_label" for="github">Github</label>
                 <input class="input" placeholder="Ej: @sandra-navarro" type="text" name="github" id="github">
             </div>
         </fieldset>
         <fieldset class="fieldset">
-            <div class="form-title-container">
-                <legend class="form-title"><i class="fas fa-share-alt form-icon"></i>COMPARTE</legend>
+            <div class="form_title-container">
+                <legend class="form_title"><i class="fas fa-share-alt form_title-icon"></i>COMPARTE</legend>
                 <span><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="share__hidden">
-                <div class="create-card">
-                    <button class="btn-create-card"><i class="far fa-address-card"> CREAR TARJETA</i></button>
+            <div class="share">
+                <div class="create_card">
+                    <button class="create_card-btn"><i class="far fa-address-card"> CREAR TARJETA</i></button>
                 </div>
-                <div class="twitter-link">
+                <div class="twitter">
                     <span class="twitter-message">La tarjeta ha sido creada:</span>
                     <a href="" class="twitter-btn"><i class="fab fa-twitter"></i>Compartir en twitter</a>
                 </div>
