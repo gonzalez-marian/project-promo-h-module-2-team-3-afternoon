@@ -1,0 +1,242 @@
+.main{
+    background-image: linear-gradient(to bottom, #f5f5f5, $white-full 9%);
+    
+}
+
+.preview{
+    background-image: linear-gradient($silver , $pale-grey);
+    height: 80vh;
+    
+    .reset{
+        width: 75px;
+        height: 30px;
+        margin-top: 38px;
+        margin-left: 45px;
+        border: solid 1px $white-full;
+        border-radius: 15px;
+        background-color: $silver;
+        font-family: $openSans-font;
+        font-size: 0.75rem;
+        line-height: 20px;
+        color: $gunmetal;
+        text-transform: uppercase;
+    }
+
+    &_card{
+        margin: 20px 35px 40px 45px;
+        background-color: $white-full;
+        width: 240px;
+        height: 329px;
+
+        &-name{
+            text-transform: capitalize;
+            font-family: $montserrat-font;
+            font-weight: $bold-weight;
+            font-size: 1.125rem;
+            line-height: 20px;
+            color: $dark-green-blue;
+            padding-top: 21px;
+            padding-left: 20px;
+            margin-top: 0px;
+            margin-bottom: 2px;
+        }
+        
+        &-job{
+            font-family: $montserrat-font;
+            font-weight: $regular-weight;
+            font-size: 1rem;
+            line-height: 20px;
+            color: $gunmetal;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            margin-top: 2px;
+            margin-bottom: 0px;
+        }
+
+        &-social{
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: center;
+            height: 50px;
+            padding-right: 62px;
+            padding-left: 20px;
+            margin-top: 7px;
+
+            .item{
+                height: 32px;
+
+                &_btn{
+                    border: solid 2px $hospital-green;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    margin: 0px 5px 15px 5px;
+                    color: $dark-green-blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+
+.form-wrapper{
+    max-width: 400px;
+    margin: 0px 20px;
+}
+.fieldset{
+    border-bottom: 1px solid $white-two;
+    padding: 20px 0 30px;
+}
+.form-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.form-title{
+    @include text-open-18-600;
+    color: $gunmetal;
+    margin: 10px 0;
+}
+.form-icon{
+    color: $dull-orange;
+    margin-right: 10px;
+}
+.fa-chevron-down{
+    color: $gunmetal;
+}
+.color{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p{
+        @include text-open-14;
+        color: $gunmetal;
+    }
+}
+.color-theme{
+    display: inline-flex;
+    li{
+        width: 30px;
+        height: 25px;
+        display: inline-block;
+    }
+}
+#palette-1, #palette-2, #palette-3{
+    vertical-align: 30%;
+}
+.color-theme-item1{
+    background-color: $dark-green-blue;
+}
+.color-theme-item2{
+    background-color: $dirty-blue;
+}
+.color-theme-item3{
+    background-color: $hospital-green;
+}
+.color-theme-item4{
+    background-color: $dried-blood;
+}
+.color-theme-item5{
+    background-color: $rusty-red;
+}
+.color-theme-item6{
+    background-color: $tomato;
+}
+.color-theme-item7{
+    background-color: $slate;
+}
+.color-theme-item8{
+    background-color: $faded-orange;
+}
+.color-theme-item9{
+    background-color: $light-grey-blue;
+}
+.input-label{
+    @include text-open-14;
+    color: $dark-green-blue;
+    display: block;
+    margin: 20px auto 7px;
+}
+.input{
+    width: 100%;
+    padding-left: 10px;
+    color: #c5c5c5;
+    @include text-open-14;
+    border: solid 1px $hospital-green;
+}
+#photo{
+    display: none;
+}
+.add-image-container{
+    display: flex;
+}
+.btn-add-image{
+    width: 140px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 $black-32;
+    background-color: $dull-orange;
+    @include text-open-14;
+    color: $white-full;
+}
+.preview-image{
+    width: 30px;
+    height: 30px;
+    border: solid 1px $hospital-green;
+    display: inline-block;
+    margin-left: 20px;
+}
+.share__hidden{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create-card{
+    width: 100%;
+    border-bottom: 1px solid $white-two;
+    display: flex;
+    justify-content: center;
+}
+.btn-create-card{
+    width: 199px;
+    height: 50px;
+    margin: 25px 0px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 $black-32;
+    background-color: $dull-orange;
+    color: $white-full;
+    &:disabled{
+        background-color: $black-32;
+    }
+}
+.twitter-link{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $white-two;
+    .twitter-message{
+        margin-top: 20px;
+        @include text-open-18-600;
+        color: $gunmetal;
+    }
+    .twitter-btn{
+        width: 181px;
+        height: 30px;
+        display: block;
+        padding-top: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 4px 0 $black-32;
+        background-color: $azure;
+        @include text-open-14;
+        color: #ffffff;
+        text-align: center;
+        margin: 20px auto 30px;
+    }
+}
