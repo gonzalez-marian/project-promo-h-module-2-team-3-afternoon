@@ -83,7 +83,7 @@
 }
 
 
-.form-wrapper{
+.form_wrapper{
     max-width: 400px;
     margin: 0px 20px;
 }
@@ -91,22 +91,24 @@
     border-bottom: 1px solid $white-two;
     padding: 20px 0 30px;
 }
-.form-title-container{
+.form_title-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
 }
-.form-title{
+.form_title{
     @include text-open-18-600;
     color: $gunmetal;
     margin: 10px 0;
+
+    &-icon{
+        color: $dull-orange;
+        margin-right: 10px;
+    }
 }
-.form-icon{
-    color: $dull-orange;
-    margin-right: 10px;
-}
+
 .fa-chevron-down{
     color: $gunmetal;
 }
@@ -114,49 +116,52 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    p{
+
+    &_title{
         @include text-open-14;
         color: $gunmetal;
     }
 }
-.color-theme{
+.color_theme{
     display: inline-flex;
-    li{
+    .items{
         width: 30px;
         height: 25px;
         display: inline-block;
     }
+
+    &-item1{
+        background-color: $dark-green-blue;
+    }
+    &-item2{
+        background-color: $dirty-blue;
+    }
+    &-item3{
+        background-color: $hospital-green;
+    }
+    &-item4{
+        background-color: $dried-blood;
+    }
+    &-item5{
+        background-color: $rusty-red;
+    }
+    &-item6{
+        background-color: $tomato;
+    }
+    &-item7{
+        background-color: $slate;
+    }
+    &-item8{
+        background-color: $faded-orange;
+    }
+    &-item9{
+        background-color: $light-grey-blue;
+    }
 }
-#palette-1, #palette-2, #palette-3{
+.palette-1, .palette-2, .palette-3{
     vertical-align: 30%;
 }
-.color-theme-item1{
-    background-color: $dark-green-blue;
-}
-.color-theme-item2{
-    background-color: $dirty-blue;
-}
-.color-theme-item3{
-    background-color: $hospital-green;
-}
-.color-theme-item4{
-    background-color: $dried-blood;
-}
-.color-theme-item5{
-    background-color: $rusty-red;
-}
-.color-theme-item6{
-    background-color: $tomato;
-}
-.color-theme-item7{
-    background-color: $slate;
-}
-.color-theme-item8{
-    background-color: $faded-orange;
-}
-.color-theme-item9{
-    background-color: $light-grey-blue;
-}
+
 .input-label{
     @include text-open-14;
     color: $dark-green-blue;
