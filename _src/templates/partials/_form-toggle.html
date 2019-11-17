@@ -8,22 +8,22 @@
             <ul class="preview_card-social">
                 <li class="item item_phone">
                     <a class="item_btn">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" id="preview_card-icons" ></i>
+                    </a>
+                </li>
+                <li class="item"> 
+                    <a class="item_btn" id="email-icon">
+                        <i class="far fa-envelope" id="preview_card-icons"></i>
                     </a>
                 </li>
                 <li class="item">
                     <a class="item_btn">
-                        <i class="far fa-envelope"></i>
+                        <i class="fab fa-linkedin-in" id="preview_card-icons"></i>
                     </a>
                 </li>
                 <li class="item">
                     <a class="item_btn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="item_btn">
-                        <i class="fab fa-github-alt"></i>
+                        <i class="fab fa-github-alt" id="preview_card-icons"></i>
                     </a>
                 </li>
             </ul>
@@ -34,9 +34,9 @@
         <fieldset class="fieldset">
             <div class="form_title-container">
                 <legend class="form_title"><i class="far fa-object-ungroup form_title-icon"></i>DISEÑA</legend>
-                <span><i class="fas fa-chevron-down"></i></span>
+                <span id="arrowDesign"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="design">
+            <div class="design" id="design">
                 <div class="color">
                     <p class="color_title">COLORES</p>
                     <div class="color_palettes">
@@ -74,15 +74,14 @@
         <fieldset class="fieldset">
             <div class="form_title-container">
                 <legend class="form_title"><i class="far fa-keyboard form_title-icon"></i>RELLENA</legend>
-                <span><i class="fas fa-chevron-down"></i></span>
+                <span id="arrowFillIn"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="fill-in">
+            <div class="fill-in" id="fillIn">
                 <label class="input_label" for="name">Nombre completo</label>
                 <input class="input" placeholder="Ej: Sandra Navarro" type="text" name="name" id="name">
 
                 <label class="input_label" for="job-title">Puesto</label>
-                <input class="input" placeholder="Ej: Programadora Front-end" type="text" name="job-title"
-                    id="job-title">
+                <input class="input" placeholder="Ej: Programadora Front-end" type="text" name="job-title" id="job-title">
 
                 <label class="input_label" for="photo">Imagen de perfil</label>
                 <input type="file" name="photo" id="photo" class="photo" value="Añadir imagen">
@@ -108,9 +107,9 @@
         <fieldset class="fieldset">
             <div class="form_title-container">
                 <legend class="form_title"><i class="fas fa-share-alt form_title-icon"></i>COMPARTE</legend>
-                <span><i class="fas fa-chevron-down"></i></span>
+                <span id="arrowShare"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="share">
+            <div class="share" id="share">
                 <div class="create_card">
                     <button class="create_card-btn"><i class="far fa-address-card"> CREAR TARJETA</i></button>
                 </div>
