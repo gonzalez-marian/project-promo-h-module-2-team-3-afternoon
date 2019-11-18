@@ -32,10 +32,10 @@
     }
   }
   .footer__logo{
-    padding: 12px 0 20px 0;
+    margin: 12px 0 20px 0;
     height: 40px;
     @include for-tablet-up{
-      padding: 10px 41px;
+      margin: 10px 41px;
     }
     
   }
