@@ -20,7 +20,7 @@
         color: $gunmetal;
         text-transform: uppercase;
     }
-
+    
     &_card{
         margin: 20px 35px 40px 45px;
         background-color: $white-full;
@@ -82,6 +82,7 @@
 }
 
 
+
 .form_wrapper{
     max-width: 400px;
     margin: 0px 20px;
@@ -124,42 +125,33 @@
 }
 .color_theme{
     display: inline-flex;
-    .items{
+    .item{
         width: 30px;
         height: 25px;
         display: inline-block;
     }
+}
 
-    &-item1{
-        background-color: $dark-green-blue;
-    }
-    &-item2{
-        background-color: $dirty-blue;
-    }
-    &-item3{
-        background-color: $hospital-green;
-    }
-    &-item4{
-        background-color: $dried-blood;
-    }
-    &-item5{
-        background-color: $rusty-red;
-    }
-    &-item6{
-        background-color: $tomato;
-    }
-    &-item7{
-        background-color: $slate;
-    }
-    &-item8{
-        background-color: $faded-orange;
-    }
-    &-item9{
-        background-color: $light-grey-blue;
+.fieldset__design--{
+    &palette-1, &palette-2, &palette-3{
+        vertical-align: 30%;
     }
 }
-.palette-1, .palette-2, .palette-3{
-    vertical-align: 30%;
+
+.palette1-{
+    &c1{background-color: $dark-green-blue;}
+    &c2{background-color: $dirty-blue;}
+    &c3{background-color: $hospital-green;}
+}
+.palette2-{
+    &c1{background-color: $dried-blood;}
+    &c2{background-color: $rusty-red;}
+    &c3{background-color: $tomato;}
+}
+.palette3-{
+    &c1{background-color: $slate;}
+    &c2{background-color: $faded-orange;}
+    &c3{background-color: $light-grey-blue;}
 }
 
 .input_label{

@@ -1,11 +1,12 @@
+//Typography
 @mixin text-open-14 {
   font-family: $openSans-font;
-  font-size: 0.875rem;
+  font-size: rem(0.875);
   line-height: 1.43;
 }
 @mixin text-open-18-600 {
   font-family: $openSans-font;
-  font-size: 1.125rem;
+  font-size: rem(1.125);
   font-weight: $semiBold-weight;
 }
 
