@@ -1,12 +1,32 @@
 'use strict';
 
-// TOOGLE
+
 const arrowDesign = document.querySelectorAll('#arrowDesign');
 const arrowFillIn = document.querySelectorAll('#arrowFillIn');
 const arrowShare = document.querySelectorAll('#arrowShare');
 const design = document.querySelector('#design');
 const fillIn = document.querySelector('#fillIn');
 const share = document.querySelector('#share');
+
+const user = {};
+user.name = document.querySelector('#name');
+user.job = document.querySelector('#job-title');
+user.email = document.querySelector('#email');
+user.tel = document.querySelector('#tel');
+user.linkedin = document.querySelector('#linkedin');
+user.github = document.querySelector('#github');
+
+const resetButton = document.querySelector('.reset');
+
+const previewCardName = document.querySelector('.preview_card-name');
+const previewCardJob = document.querySelector('.preview_card-job');
+const phoneIcon = document.querySelector('#phone-icon');
+const emailIcon = document.querySelector('#email-icon');
+const linkedinIcon = document.querySelector('#linkedin-icon');
+const githubIcon = document.querySelector('#github-icon');
+
+
+// start page functions
 
 fillIn.classList.add('hidden');
 share.classList.add('hidden');
@@ -41,87 +61,58 @@ arrowShare.forEach(function (arrow) {
 
 //COLORS
 
-const previewCardName = document.querySelector('.preview_card-name');
-const itemBtn = document.querySelector('.item_btn');
-const previewCardIcons = document.querySelector('#preview_card-icons');
-
-const palette1 = document.querySelector('#palette-1');
-function usePalette1() {
-    previewCardName.style.color = '#114e4e';
-    itemBtn.style.borderColor = '#a2deaf';
-    previewCardIcons.style.color = '#114e4e';
-}
-palette1.addEventListener('click', usePalette1);
-
-/*const palette2 = document.querySelectorAll('#palette-2');
-function usePalette2(){
-  previewCardName.style.color = '#420101';
-  itemBtn.style.borderColor = '#e95626';
-  previewCardIcons.style.color = '#420101';
-}
-palette2.addEventListener('click',usePalette2);
-
-const palette3 = document.querySelector('#palette-3');
-function usePalette3(){
-  previewCardName.style.color = '#3e5b65';
-  itemBtn.style.borderColor = '#a0c0cf';
-  previewCardIcons.style.color = '#3e5b65';
-}
-palette3.addEventListener('click', usePalette3);*/
 
 //INPUTS
 
 //nombre
 
-const name = document.querySelector('#name');
 function addName() {
-    previewCardName.innerHTML = name.value;
+    previewCardName.innerHTML = user.name.value;
 }
-name.addEventListener('keyup', addName);
+user.name.addEventListener('keyup', addName);
 
 //puesto
-const jobTitle = document.querySelector('#job-title');
-const previewCardJob = document.querySelector('.preview_card-job');
-function addJobTitle() {
-    previewCardJob.innerHTML = jobTitle.value;
+
+function addJob() {
+    previewCardJob.innerHTML = user.job.value;
 }
-jobTitle.addEventListener('keyup', addJobTitle);
+user.job.addEventListener('keyup', addJob);
 
 //email
-const email = document.querySelector('#email');
-const emailIcon = document.querySelector('#email-icon');
+
 function addEmail() {
-    emailIcon.href = `mailto: ${email.value}`;
+    emailIcon.href = `mailto: ${user.email.value}`;
 }
 
 email.addEventListener('change', addEmail);
 
+//linkedin
 
-
-
-
-//const selectedSection = document.querySelector('.');--> clase de la sección q aparece por defecto
-//const selectedPalette = document.querySelector('.');--> clase de la paleta q aparece por defecto
-const resetButton = document.querySelector('.reset');
-
-const user = {};
-user.name = document.querySelector('#name');
-user.job = document.querySelector('#job-title');
-user.email = document.querySelector('#email');
-user.tel = document.querySelector('#tel');
-user.linkedin = document.querySelector('#linkedin');
-user.github = document.querySelector('#github');
-
-
-// start page functions
-
-const init = () => {
-    displaySection();
-    console.log('Aparece la primera sección abierta y las otras cerradas');
-    applyPalette();
-    console.log('Se aplica la paleta de colores por defecto');
-
+function addLinkedin() {
+    linkedinIcon.href = `http://www.linkedin.com/in/ ${user.linkedin.value}`;
 }
+email.addEventListener('change', addLinkedin);
+
+//github
+
+function addGithub() {
+    githubIcon.href = `http://www.github.com/ ${user.github.value}`;
+}
+email.addEventListener('change', addGithub);
+
+
+
+
+
+
+
+// const init = () => {
+//     displaySection();
+//     console.log('Aparece la primera sección abierta y las otras cerradas');
+//     applyPalette();
+//     console.log('Se aplica la paleta de colores por defecto');
+
+// }
 
 // functions
 
