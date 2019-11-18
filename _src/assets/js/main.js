@@ -4,12 +4,14 @@
 //const selectedPalette = document.querySelector('.');--> clase de la paleta q aparece por defecto
 const resetButton = document.querySelector('.reset');
 
-const name = document.querySelector('#name');
-const job = document.querySelector('#job-title');
-const email = document.querySelector('#email');
-const tel = document.querySelector('#tel');
-const linkedin = document.querySelector('#linkedin');
-const github = document.querySelector('#github');
+const user = {};
+user.name = document.querySelector('#name');
+user.job = document.querySelector('#job-title');
+user.email = document.querySelector('#email');
+user.tel = document.querySelector('#tel');
+user.linkedin = document.querySelector('#linkedin');
+user.github = document.querySelector('#github');
+
 
 // start page functions
 
@@ -56,7 +58,7 @@ let paintInput = () => {
     console.log('Hacemos que el valor añadido aparezca en la preview');
 }
 
-let arrobaCheck() {
+let atSignCheck() {
     if (true) {
         console.log('Si es un dato con @ compruebo que esté incluido');
         if (true) {
@@ -89,10 +91,10 @@ tel.addEventListener('keyup', handleInput);
 linkedin.addEventListener('keyup', handleInput);
 github.addEventListener('keyup', handleInput);
 
-email.addEventListener('change', arrobaCheck);
+email.addEventListener('change', atSignCheck);
 tel.addEventListener('change', phoneCheck);
-linkedin.addEventListener('change', arrobaCheck);
-github.addEventListener('change', arrobaCheck);
+linkedin.addEventListener('change', atSignCheck);
+github.addEventListener('change', atSignCheck);
 
 
 // init page
