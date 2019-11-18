@@ -2,6 +2,7 @@
 
 //const selectedSection = document.querySelector('.');--> clase de la sección q aparece por defecto
 //const selectedPalette = document.querySelector('.');--> clase de la paleta q aparece por defecto
+const resetButton = document.querySelector('.reset');
 
 const name = document.querySelector('#name');
 const job = document.querySelector('#job-title');
@@ -18,36 +19,81 @@ const init = () => {
     applyPalette();
     console.log('Se aplica la paleta de colores por defecto');
 
-};
-
-// dom listeners
-
-const applyPalette = () => {
-    console.log('Se aplica la paleta de colores elegida');
-};
-
-const displaySection = () => {
-    console.log('Se abre la sección seleccionada y se cierran el resto');
-};
-
-const handleInput = () => {
-
-};
+}
 
 // functions
 
 
+const applyPalette = () => {
+    console.log('Se aplica la paleta de colores elegida');
+}
 
-// listeners
+const displaySection = () => {
+    console.log('Se abre la sección seleccionada y se cierran el resto');
+}
+
+const resetInfo = () => {
+    console.log('Se borra toda la info que el usuario haya introducido y se aplica paleta por defecto');
+}
+
+const handleInput = () => {
+    console.log('Se gestionan los cambios producidos en un campo hasta que el usuario quita el foco del mismo');
+    readInput();
+    simpleCheck();
+    paintInput();
+
+}
+
+let readInput = () => {
+    console.log('Asigno ');
+}
+
+let simpleCheck = () => {
+    console.log('Compruebo que la tecla pulsada corresponde al tipo de valor del campo');
+}
+
+let paintInput = () => {
+    console.log('Hacemos que el valor añadido aparezca en la preview');
+}
+
+let arrobaCheck() {
+    if (true) {
+        console.log('Si es un dato con @ compruebo que esté incluido');
+        if (true) {
+            console.log('Si es correcto, muestro un mensaje de confirmación');
+        } else {
+            console.log('Si no es correcto muestro un color y mensaje de error');
+        }
+    } else {
+        console.log('Si es un dato sin @ no hago nada o muestro mensaje invitando rellenar siguiente campo');
+    }
+}
+let phoneCheck() {
+    console.log('Comprueba si el campo teléfono consta exactamente de 9 números');
+    if (false) {
+        console.log('Si no es así, muestra mensaje de error');
+    }
+}
+
+
+// DOM listeners
 
 selectedPalette.addEventListener('click', applyPalette);
 selectedSection.addEventListener('click', displaySection);
+resetButton.addEventListener('reset', resetInfo);
+
 name.addEventListener('keyup', handleInput);
 job.addEventListener('keyup', handleInput);
 email.addEventListener('keyup', handleInput);
 tel.addEventListener('keyup', handleInput);
 linkedin.addEventListener('keyup', handleInput);
 github.addEventListener('keyup', handleInput);
+
+email.addEventListener('change', arrobaCheck);
+tel.addEventListener('change', phoneCheck);
+linkedin.addEventListener('change', arrobaCheck);
+github.addEventListener('change', arrobaCheck);
+
 
 // init page
 
