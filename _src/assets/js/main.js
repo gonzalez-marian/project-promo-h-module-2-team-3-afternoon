@@ -24,6 +24,7 @@ const phoneIcon = document.querySelector('#phone-icon');
 const emailIcon = document.querySelector('#email-icon');
 const linkedinIcon = document.querySelector('#linkedin-icon');
 const githubIcon = document.querySelector('#github-icon');
+const iconItems = document.querySelector('.item');
 
 
 // start page functions
@@ -63,7 +64,7 @@ arrowShare.forEach(function (arrow) {
 
 //RESET
 
-function resetInput(){
+function resetInput() {
     previewCardName.innerHTML = 'Nombre completo';
     previewCardJob.innerHTML = 'Programadora Front-end';
     /*phoneIcon.href = '';*/
@@ -101,7 +102,7 @@ user.tel.addEventListener('change', addPhone);*/
 
 function addEmail() {
     emailIcon.href = `mailto: ${user.email.value}`;
-    user.email.classList.remove('hidden');
+    iconItems.classList.remove('hidden');
 }
 
 user.email.addEventListener('change', addEmail);
@@ -109,24 +110,16 @@ user.email.addEventListener('change', addEmail);
 //linkedin
 
 function addLinkedin() {
-<<<<<<< HEAD
-    linkedinIcon.href = `http://www.linkedin.com/in/ ${user.linkedin.value}`;
-    user.linkedin.classList.remove('hidden');
-=======
-    linkedinIcon.href = user.linkedin.value;
->>>>>>> 41b710d29664a99c58be5a5736a1dc36b0101e96
+    linkedinIcon.href = `${user.linkedin.value}`;
+    iconItems.classList.remove('hidden');
 }
 user.linkedin.addEventListener('change', addLinkedin);
 
 //github
 
 function addGithub() {
-<<<<<<< HEAD
-    githubIcon.href = `http://www.github.com/ ${user.github.value}`;
-    user.github.classList.remove('hidden');
-=======
-    githubIcon.href = `https://github.com/${user.github.value}`;
->>>>>>> 41b710d29664a99c58be5a5736a1dc36b0101e96
+    githubIcon.href = `http://github.com/${user.github.value}`;
+    iconItems.classList.remove('hidden');
 }
 user.github.addEventListener('change', addGithub);
 
