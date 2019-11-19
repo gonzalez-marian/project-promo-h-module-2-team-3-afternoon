@@ -65,8 +65,8 @@ arrowShare.forEach(function (arrow) {
 //RESET
 
 function resetInput() {
-    previewCardName.innerHTML = 'Nombre completo';
-    previewCardJob.innerHTML = 'Programadora Front-end';
+    previewCardName.innerHTML = 'Nombre Apellido';
+    previewCardJob.innerHTML = 'Front-end developer';
     /*phoneIcon.href = '';*/
     emailIcon.href = '';
     linkedinIcon.href = '';
