@@ -146,7 +146,7 @@
     }
 }
 
-.fieldset__design--{
+#fieldset__design--{
     &palette-1, &palette-2, &palette-3{
         vertical-align: 30%;
     }
@@ -256,4 +256,10 @@
 /*JS classes*/
 .hidden{
     display: none;
+}
+.driedBlood{
+    color: $dried-blood;
+}
+.slate{
+    color: $slate;
 }

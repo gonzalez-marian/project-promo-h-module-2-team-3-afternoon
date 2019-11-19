@@ -24,7 +24,8 @@ const phoneIcon = document.querySelector('#phone-icon');
 const emailIcon = document.querySelector('#email-icon');
 const linkedinIcon = document.querySelector('#linkedin-icon');
 const githubIcon = document.querySelector('#github-icon');
-const iconItems = document.querySelector('.item');
+const iconItems = document.querySelectorAll('#preview_card-icons');
+const iconButtons = document.querySelectorAll('.item_btn');
 
 
 // start page functions
@@ -61,6 +62,29 @@ arrowShare.forEach(function (arrow) {
 })
 
 //COLORS
+const palette2 = document.querySelector('#fieldset__design--palette-2');
+function applyPalette2 (){
+    previewCardName.classList.add('driedBlood');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('driedBlood');
+      }
+    for (const iconButton of iconButtons){
+        iconButton.style.borderColor = '#e95626';
+    }
+}
+palette2.addEventListener('click', applyPalette2);
+
+const palette3 = document.querySelector('#fieldset__design--palette-3');
+function applyPalette3 (){
+    previewCardName.classList.add('slate');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('slate');
+    }
+    for (const iconButton of iconButtons) {
+        iconButton.style.borderColor = '#a0c0cf';
+    }
+}
+palette3.addEventListener('click', applyPalette3);
 
 //RESET
 
