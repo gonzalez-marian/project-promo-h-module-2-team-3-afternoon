@@ -61,6 +61,18 @@ arrowShare.forEach(function (arrow) {
 
 //COLORS
 
+//RESET
+
+function resetInput(){
+    previewCardName.innerHTML = 'Nombre completo';
+    previewCardJob.innerHTML = 'Programadora Front-end';
+    /*phoneIcon.href = '';*/
+    emailIcon.href = '';
+    linkedinIcon.href = '';
+    githubIcon.href = '';
+};
+resetButton.addEventListener('click', resetInput)
+
 
 //INPUTS
 
@@ -78,6 +90,13 @@ function addJob() {
 }
 user.job.addEventListener('keyup', addJob);
 
+//telefono
+
+/*function addPhone() {
+    phoneIcon.href = user.tel.value;
+}
+user.tel.addEventListener('change', addPhone);*/
+
 //email
 
 function addEmail() {
@@ -90,16 +109,24 @@ user.email.addEventListener('change', addEmail);
 //linkedin
 
 function addLinkedin() {
+<<<<<<< HEAD
     linkedinIcon.href = `http://www.linkedin.com/in/ ${user.linkedin.value}`;
     user.linkedin.classList.remove('hidden');
+=======
+    linkedinIcon.href = user.linkedin.value;
+>>>>>>> 41b710d29664a99c58be5a5736a1dc36b0101e96
 }
 user.linkedin.addEventListener('change', addLinkedin);
 
 //github
 
 function addGithub() {
+<<<<<<< HEAD
     githubIcon.href = `http://www.github.com/ ${user.github.value}`;
     user.github.classList.remove('hidden');
+=======
+    githubIcon.href = `https://github.com/${user.github.value}`;
+>>>>>>> 41b710d29664a99c58be5a5736a1dc36b0101e96
 }
 user.github.addEventListener('change', addGithub);
 
