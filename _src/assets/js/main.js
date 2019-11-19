@@ -82,23 +82,26 @@ user.job.addEventListener('keyup', addJob);
 
 function addEmail() {
     emailIcon.href = `mailto: ${user.email.value}`;
+    user.email.classList.remove('hidden');
 }
 
-email.addEventListener('change', addEmail);
+user.email.addEventListener('change', addEmail);
 
 //linkedin
 
 function addLinkedin() {
     linkedinIcon.href = `http://www.linkedin.com/in/ ${user.linkedin.value}`;
+    user.linkedin.classList.remove('hidden');
 }
-email.addEventListener('change', addLinkedin);
+user.linkedin.addEventListener('change', addLinkedin);
 
 //github
 
 function addGithub() {
     githubIcon.href = `http://www.github.com/ ${user.github.value}`;
+    user.github.classList.remove('hidden');
 }
-email.addEventListener('change', addGithub);
+user.github.addEventListener('change', addGithub);
 
 
 
