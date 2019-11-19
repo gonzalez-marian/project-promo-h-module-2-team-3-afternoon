@@ -61,6 +61,18 @@ arrowShare.forEach(function (arrow) {
 
 //COLORS
 
+//RESET
+
+function resetInput(){
+    previewCardName.innerHTML = 'Nombre completo';
+    previewCardJob.innerHTML = 'Programadora Front-end';
+    /*phoneIcon.href = '';*/
+    emailIcon.href = '';
+    linkedinIcon.href = '';
+    githubIcon.href = '';
+};
+resetButton.addEventListener('click', resetInput)
+
 
 //INPUTS
 
@@ -78,6 +90,13 @@ function addJob() {
 }
 user.job.addEventListener('keyup', addJob);
 
+//telefono
+
+/*function addPhone() {
+    phoneIcon.href = user.tel.value;
+}
+user.tel.addEventListener('change', addPhone);*/
+
 //email
 
 function addEmail() {
@@ -89,16 +108,16 @@ email.addEventListener('change', addEmail);
 //linkedin
 
 function addLinkedin() {
-    linkedinIcon.href = `http://www.linkedin.com/in/ ${user.linkedin.value}`;
+    linkedinIcon.href = user.linkedin.value;
 }
-email.addEventListener('change', addLinkedin);
+user.linkedin.addEventListener('change', addLinkedin);
 
 //github
 
 function addGithub() {
-    githubIcon.href = `http://www.github.com/ ${user.github.value}`;
+    githubIcon.href = `https://github.com/${user.github.value}`;
 }
-email.addEventListener('change', addGithub);
+user.github.addEventListener('change', addGithub);
 
 
 
