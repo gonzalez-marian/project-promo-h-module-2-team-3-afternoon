@@ -13,31 +13,12 @@
         margin-top: 23px;
         margin-bottom: 21px;
         border-radius: 6px;
-
-        .reset{
-            margin-top: 173px;
-        }
+        padding: 50px 0 80px;
     }  
     
     .form_wrapper{
-        min-width: 400px;
-        margin: 0;
+        width: 400px;
+        margin-block-end: auto;
         padding-right: 30px;
-    }
-}
-
-@media all and (min-width: 1024px){
-    .preview{
-
-        .reset{
-            transform: translateX(181%);
-        }
-
-        /*&_card{
-            transform: translateX(56%);
-        }*/
-    }
-    .form_wrapper{
-        margin: auto;
     }
 }
