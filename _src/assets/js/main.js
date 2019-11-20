@@ -1,5 +1,110 @@
 'use strict';
 
+const colorInputs = document.querySelectorAll('.palette');
+
+//accedo a los elementos que cambian de color
+const colorName = document.querySelector('.preview_card-name');
+const colorIcons = document.querySelector('.item_btn');
+const colorVertLine = document.querySelector('.preview_card-head');
+
+//creo ctes para cada input de tipo radio
+const paletteOne = document.querySelector('#fieldset__design--palette-1');
+const paletteTwo = document.querySelector('#fieldset__design--palette-2');
+const paletteThree = document.querySelector('#fieldset__design--palette-3');
+
+if (paletteOne.checked) {
+    console.log('paleta 1');
+    colorName.classList.add('.palette1-name');
+    colorVertLine.classList.add('.palette1-line');
+    colorIcons.classList.add('.palette1-icons');
+
+    colorName.classList.remove('.palette2-name');
+    colorVertLine.classList.remove('.palette2-line');
+    colorIcons.classList.remove('.palette2-icons');
+
+    colorName.classList.remove('.palette3-name');
+    colorVertLine.classList.remove('.palette3-line');
+    colorIcons.classList.remove('.palette3-icons');
+}
+
+
+if (paletteTwo.checked) {
+    console.log('paleta 2');
+    colorName.classList.remove('.palette1-name');
+    colorVertLine.classList.remove('.palette1-line');
+    colorIcons.classList.remove('.palette1-icons');
+
+    colorName.classList.add('.palette2-name');
+    colorVertLine.classList.add('.palette2-line');
+    colorIcons.classList.add('.palette2-icons');
+
+    colorName.classList.remove('.palette3-name');
+    colorVertLine.classList.remove('.palette3-line');
+    colorIcons.classList.remove('.palette3-icons');
+}
+
+if (paletteThree.checked) {
+    console.log('paleta 3');
+    colorName.classList.remove('.palette1-name');
+    colorVertLine.classList.remove('.palette1-line');
+    colorIcons.classList.remove('.palette1-icons');
+
+    colorName.classList.remove('.palette2-name');
+    colorVertLine.classList.remove('.palette2-line');
+    colorIcons.classList.remove('.palette2-icons');
+
+    colorName.classList.add('.palette3-name');
+    colorVertLine.classList.add('.palette3-line');
+    colorIcons.classList.add('.palette3-icons');
+}
+
+// if (colorInputs.value === 'palette1') {
+//     colorName.classList.add('.palette1-name');
+//     colorVertLine.classList.add('.palette1-line');
+//     colorIcons.classList.add('.palette1-icons');
+
+//     colorName.classList.remove('.palette2-name');
+//     colorVertLine.classList.remove('.palette2-line');
+//     colorIcons.classList.remove('.palette2-icons');
+
+//     colorName.classList.remove('.palette3-name');
+//     colorVertLine.classList.remove('.palette3-line');
+//     colorIcons.classList.remove('.palette3-icons');
+// }
+
+
+// if (colorInputs.value === 'palette2') {
+//     colorName.classList.remove('.palette1-name');
+//     colorVertLine.classList.remove('.palette1-line');
+//     colorIcons.classList.remove('.palette1-icons');
+
+//     colorName.classList.add('.palette2-name');
+//     colorVertLine.classList.add('.palette2-line');
+//     colorIcons.classList.add('.palette2-icons');
+
+//     colorName.classList.remove('.palette3-name');
+//     colorVertLine.classList.remove('.palette3-line');
+//     colorIcons.classList.remove('.palette3-icons');
+// }
+
+// if (colorInputs.value === 'palette3') {
+//     colorName.classList.remove('.palette1-name');
+//     colorVertLine.classList.remove('.palette1-line');
+//     colorIcons.classList.remove('.palette1-icons');
+
+//     colorName.classList.remove('.palette2-name');
+//     colorVertLine.classList.remove('.palette2-line');
+//     colorIcons.classList.remove('.palette2-icons');
+
+//     colorName.classList.add('.palette3-name');
+//     colorVertLine.classList.add('.palette3-line');
+//     colorIcons.classList.add('.palette3-icons');
+// }
+
+
+
+
+
 
 const arrowDesign = document.querySelectorAll('#arrowDesign');
 const arrowFillIn = document.querySelectorAll('#arrowFillIn');
@@ -63,7 +168,7 @@ arrowShare.forEach(function (arrow) {
 
 //RESET
 
-function resetInput(){
+function resetInput() {
     previewCardName.innerHTML = 'Nombre completo';
     previewCardJob.innerHTML = 'Programadora Front-end';
     /*phoneIcon.href = '';*/
