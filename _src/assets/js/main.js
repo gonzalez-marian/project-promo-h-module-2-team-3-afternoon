@@ -71,11 +71,32 @@ function toggleShare() {
 arrowShare.addEventListener('click', toggleShare);
 
 //COLORS
+
+const palette1 = document.querySelector('#fieldset__design--palette-1');
+function applyPalette1 (){
+    previewCardName.classList.add('darkGreenBlue');
+    previewCardName.classList.remove('driedBlood');
+    previewCardName.classList.remove('slate');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('darkGreenBlue');
+        iconItem.classList.remove('driedBlood');
+        iconItem.classList.remove('slate');
+      }
+    for (const iconButton of iconButtons){
+        iconButton.style.borderColor = '#a2deaf';
+    }
+}
+palette1.addEventListener('click', applyPalette1);
+
 const palette2 = document.querySelector('#fieldset__design--palette-2');
 function applyPalette2 (){
     previewCardName.classList.add('driedBlood');
+    previewCardName.classList.remove('darkGreenBlue');
+    previewCardName.classList.remove('slate');
     for (const iconItem of iconItems) {
         iconItem.classList.add('driedBlood');
+        iconItem.classList.remove('darkGreenBlue');
+        iconItem.classList.remove('slate');
       }
     for (const iconButton of iconButtons){
         iconButton.style.borderColor = '#e95626';
@@ -86,8 +107,12 @@ palette2.addEventListener('click', applyPalette2);
 const palette3 = document.querySelector('#fieldset__design--palette-3');
 function applyPalette3 (){
     previewCardName.classList.add('slate');
+    previewCardName.classList.remove('driedBlood');
+    previewCardName.classList.remove('darkGreenBlue');
     for (const iconItem of iconItems) {
         iconItem.classList.add('slate');
+        iconItem.classList.remove('driedBlood');
+        iconItem.classList.remove('darkGreenBlue');
     }
     for (const iconButton of iconButtons) {
         iconButton.style.borderColor = '#a0c0cf';
