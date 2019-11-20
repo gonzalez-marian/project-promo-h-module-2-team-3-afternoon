@@ -20,6 +20,7 @@ const resetButton = document.querySelector('.reset');
 
 const previewCardName = document.querySelector('.preview_card-name');
 const previewCardJob = document.querySelector('.preview_card-job');
+const previewCardLine = document.querySelector('.preview_card-head');
 const phoneIcon = document.querySelector('#phone-icon');
 const emailIcon = document.querySelector('#email-icon');
 const linkedinIcon = document.querySelector('#linkedin-icon');
@@ -61,6 +62,32 @@ arrowShare.forEach(function (arrow) {
 })
 
 //COLORS
+const palette2 = document.querySelector('#fieldset__design--palette-2');
+function applyPalette2() {
+    previewCardName.style.co
+    previewCardName.classList.add('p2-name');
+    previewCardLine.classList.add('p2-line');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('p2-icons');
+    }
+    for (const iconButton of iconButtons) {
+        iconButton.style.borderColor = '#e95626';
+    }
+}
+palette2.addEventListener('click', applyPalette2);
+
+const palette3 = document.querySelector('#fieldset__design--palette-3');
+function applyPalette3() {
+    previewCardName.classList.add('slate');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('slate');
+    }
+    for (const iconButton of iconButtons) {
+        iconButton.style.borderColor = '#a0c0cf';
+    }
+}
+palette3.addEventListener('click', applyPalette3);
+
 
 //RESET
 
