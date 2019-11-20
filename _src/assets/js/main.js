@@ -12,6 +12,22 @@ const paletteOne = document.querySelector('#fieldset__design--palette-1');
 const paletteTwo = document.querySelector('#fieldset__design--palette-2');
 const paletteThree = document.querySelector('#fieldset__design--palette-3');
 
+function applyPaletteOne() {
+    console.log('paleta 1');
+    colorName.classList.add('.palette1-name');
+    colorVertLine.classList.add('.palette1-line');
+    colorIcons.classList.add('.palette1-icons');
+
+    colorName.classList.remove('.palette2-name');
+    colorVertLine.classList.remove('.palette2-line');
+    colorIcons.classList.remove('.palette2-icons');
+
+    colorName.classList.remove('.palette3-name');
+    colorVertLine.classList.remove('.palette3-line');
+    colorIcons.classList.remove('.palette3-icons');
+
+}
+
 if (paletteOne.checked) {
     console.log('paleta 1');
     colorName.classList.add('.palette1-name');
@@ -57,6 +73,8 @@ if (paletteThree.checked) {
     colorVertLine.classList.add('.palette3-line');
     colorIcons.classList.add('.palette3-icons');
 }
+
+paletteOne.addEventListener('click', applyPaletteOne);
 
 // if (colorInputs.value === 'palette1') {
 //     colorName.classList.add('.palette1-name');
