@@ -12,235 +12,270 @@ const paletteOne = document.querySelector('#fieldset__design--palette-1');
 const paletteTwo = document.querySelector('#fieldset__design--palette-2');
 const paletteThree = document.querySelector('#fieldset__design--palette-3');
 
-function applyPaletteOne() {
-    console.log('paleta 1');
-    colorName.classList.add('.palette1-name');
-    colorVertLine.classList.add('.palette1-line');
-    colorIcons.classList.add('.palette1-icons');
-
-    colorName.classList.remove('.palette2-name');
-    colorVertLine.classList.remove('.palette2-line');
-    colorIcons.classList.remove('.palette2-icons');
-
-    colorName.classList.remove('.palette3-name');
-    colorVertLine.classList.remove('.palette3-line');
-    colorIcons.classList.remove('.palette3-icons');
-
-}
-
-if (paletteOne.checked) {
-    console.log('paleta 1');
-    colorName.classList.add('.palette1-name');
-    colorVertLine.classList.add('.palette1-line');
-    colorIcons.classList.add('.palette1-icons');
-
-    colorName.classList.remove('.palette2-name');
-    colorVertLine.classList.remove('.palette2-line');
-    colorIcons.classList.remove('.palette2-icons');
-
-    colorName.classList.remove('.palette3-name');
-    colorVertLine.classList.remove('.palette3-line');
-    colorIcons.classList.remove('.palette3-icons');
-}
-
-
-if (paletteTwo.checked) {
-    console.log('paleta 2');
-    colorName.classList.remove('.palette1-name');
-    colorVertLine.classList.remove('.palette1-line');
-    colorIcons.classList.remove('.palette1-icons');
-
-    colorName.classList.add('.palette2-name');
-    colorVertLine.classList.add('.palette2-line');
-    colorIcons.classList.add('.palette2-icons');
-
-    colorName.classList.remove('.palette3-name');
-    colorVertLine.classList.remove('.palette3-line');
-    colorIcons.classList.remove('.palette3-icons');
-}
-
-if (paletteThree.checked) {
-    console.log('paleta 3');
-    colorName.classList.remove('.palette1-name');
-    colorVertLine.classList.remove('.palette1-line');
-    colorIcons.classList.remove('.palette1-icons');
-
-    colorName.classList.remove('.palette2-name');
-    colorVertLine.classList.remove('.palette2-line');
-    colorIcons.classList.remove('.palette2-icons');
-
-    colorName.classList.add('.palette3-name');
-    colorVertLine.classList.add('.palette3-line');
-    colorIcons.classList.add('.palette3-icons');
-}
-
-paletteOne.addEventListener('click', applyPaletteOne);
-
-// if (colorInputs.value === 'palette1') {
-//     colorName.classList.add('.palette1-name');
-//     colorVertLine.classList.add('.palette1-line');
-//     colorIcons.classList.add('.palette1-icons');
-
-//     colorName.classList.remove('.palette2-name');
-//     colorVertLine.classList.remove('.palette2-line');
-//     colorIcons.classList.remove('.palette2-icons');
-
-//     colorName.classList.remove('.palette3-name');
-//     colorVertLine.classList.remove('.palette3-line');
-//     colorIcons.classList.remove('.palette3-icons');
-// }
-
-
-// if (colorInputs.value === 'palette2') {
-//     colorName.classList.remove('.palette1-name');
-//     colorVertLine.classList.remove('.palette1-line');
-//     colorIcons.classList.remove('.palette1-icons');
-
-//     colorName.classList.add('.palette2-name');
-//     colorVertLine.classList.add('.palette2-line');
-//     colorIcons.classList.add('.palette2-icons');
-
-//     colorName.classList.remove('.palette3-name');
-//     colorVertLine.classList.remove('.palette3-line');
-//     colorIcons.classList.remove('.palette3-icons');
-// }
-
-// if (colorInputs.value === 'palette3') {
-//     colorName.classList.remove('.palette1-name');
-//     colorVertLine.classList.remove('.palette1-line');
-//     colorIcons.classList.remove('.palette1-icons');
-
-//     colorName.classList.remove('.palette2-name');
-//     colorVertLine.classList.remove('.palette2-line');
-//     colorIcons.classList.remove('.palette2-icons');
-
-//     colorName.classList.add('.palette3-name');
-//     colorVertLine.classList.add('.palette3-line');
-//     colorIcons.classList.add('.palette3-icons');
-// }
-
-
-
-
-
-
-const arrowDesign = document.querySelectorAll('#arrowDesign');
-const arrowFillIn = document.querySelectorAll('#arrowFillIn');
-const arrowShare = document.querySelectorAll('#arrowShare');
-const design = document.querySelector('#design');
-const fillIn = document.querySelector('#fillIn');
-const share = document.querySelector('#share');
-
-const user = {};
-user.name = document.querySelector('#name');
-user.job = document.querySelector('#job-title');
-user.email = document.querySelector('#email');
-user.tel = document.querySelector('#tel');
-user.linkedin = document.querySelector('#linkedin');
-user.github = document.querySelector('#github');
-
-const resetButton = document.querySelector('.reset');
-
-const previewCardName = document.querySelector('.preview_card-name');
-const previewCardJob = document.querySelector('.preview_card-job');
-const phoneIcon = document.querySelector('#phone-icon');
-const emailIcon = document.querySelector('#email-icon');
-const linkedinIcon = document.querySelector('#linkedin-icon');
-const githubIcon = document.querySelector('#github-icon');
-
-
-// start page functions
-
-fillIn.classList.add('hidden');
-share.classList.add('hidden');
-
-function hideDesign() {
-    design.classList.toggle('hidden');
-    fillIn.classList.add('hidden');
-    share.classList.add('hidden');
-
-}
-arrowDesign.forEach(function (arrow) {
-    arrow.addEventListener('click', hideDesign);
-})
-
-function toggleFillIn() {
-    fillIn.classList.toggle('hidden');
-    design.classList.add('hidden');
-    share.classList.add('hidden');
-}
-arrowFillIn.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleFillIn);
-})
-
-function toggleShare() {
-    share.classList.toggle('hidden');
-    design.classList.add('hidden');
-    fillIn.classList.add('hidden');
-}
-arrowShare.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleShare);
-})
+//VERSIÓN 3
 
 //COLORS
+const palette2 = document.querySelector('#fieldset__design--palette-2');
+function applyPalette2() {
+    console.log('pal2');
+    previewCardName.classList.add('palette2-name');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('palette2-icons');
+        // }
+        // for (const iconButton of iconButtons) {
+        //     iconButton.style.borderColor = '#e95626';
+        // }
+    }
+    palette2.addEventListener('click', applyPalette2);
 
-//RESET
+    const palette3 = document.querySelector('#fieldset__design--palette-3');
+    function applyPalette3() {
+        previewCardName.classList.add('slate');
+        for (const iconItem of iconItems) {
+            iconItem.classList.add('slate');
+        }
+        for (const iconButton of iconButtons) {
+            iconButton.style.borderColor = '#a0c0cf';
+        }
+    }
+    palette3.addEventListener('click', applyPalette3);
 
-function resetInput() {
-    previewCardName.innerHTML = 'Nombre completo';
-    previewCardJob.innerHTML = 'Programadora Front-end';
-    /*phoneIcon.href = '';*/
-    emailIcon.href = '';
-    linkedinIcon.href = '';
-    githubIcon.href = '';
-};
-resetButton.addEventListener('click', resetInput)
 
 
-//INPUTS
+    //VERSIÓN 2
+    // function applyPaletteOne() {
+    //     console.log('paleta 1');
+    //     colorName.classList.add('.palette1-name');
+    //     colorVertLine.classList.add('.palette1-line');
+    //     colorIcons.classList.add('.palette1-icons');
 
-//nombre
+    //     colorName.classList.remove('.palette2-name');
+    //     colorVertLine.classList.remove('.palette2-line');
+    //     colorIcons.classList.remove('.palette2-icons');
 
-function addName() {
-    previewCardName.innerHTML = user.name.value;
-}
-user.name.addEventListener('keyup', addName);
+    //     colorName.classList.remove('.palette3-name');
+    //     colorVertLine.classList.remove('.palette3-line');
+    //     colorIcons.classList.remove('.palette3-icons');
 
-//puesto
+    // }
 
-function addJob() {
-    previewCardJob.innerHTML = user.job.value;
-}
-user.job.addEventListener('keyup', addJob);
+    // if (paletteOne.checked) {
+    //     console.log('paleta 1');
+    //     colorName.classList.add('.palette1-name');
+    //     colorVertLine.classList.add('.palette1-line');
+    //     colorIcons.classList.add('.palette1-icons');
 
-//telefono
+    //     colorName.classList.remove('.palette2-name');
+    //     colorVertLine.classList.remove('.palette2-line');
+    //     colorIcons.classList.remove('.palette2-icons');
 
-/*function addPhone() {
-    phoneIcon.href = user.tel.value;
-}
-user.tel.addEventListener('change', addPhone);*/
+    //     colorName.classList.remove('.palette3-name');
+    //     colorVertLine.classList.remove('.palette3-line');
+    //     colorIcons.classList.remove('.palette3-icons');
+    // }
 
-//email
 
-function addEmail() {
-    emailIcon.href = `mailto: ${user.email.value}`;
-}
+    // if (paletteTwo.checked) {
+    //     console.log('paleta 2');
+    //     colorName.classList.remove('.palette1-name');
+    //     colorVertLine.classList.remove('.palette1-line');
+    //     colorIcons.classList.remove('.palette1-icons');
 
-email.addEventListener('change', addEmail);
+    //     colorName.classList.add('.palette2-name');
+    //     colorVertLine.classList.add('.palette2-line');
+    //     colorIcons.classList.add('.palette2-icons');
 
-//linkedin
+    //     colorName.classList.remove('.palette3-name');
+    //     colorVertLine.classList.remove('.palette3-line');
+    //     colorIcons.classList.remove('.palette3-icons');
+    // }
 
-function addLinkedin() {
-    linkedinIcon.href = user.linkedin.value;
-}
-user.linkedin.addEventListener('change', addLinkedin);
+    // if (paletteThree.checked) {
+    //     console.log('paleta 3');
+    //     colorName.classList.remove('.palette1-name');
+    //     colorVertLine.classList.remove('.palette1-line');
+    //     colorIcons.classList.remove('.palette1-icons');
 
-//github
+    //     colorName.classList.remove('.palette2-name');
+    //     colorVertLine.classList.remove('.palette2-line');
+    //     colorIcons.classList.remove('.palette2-icons');
 
-function addGithub() {
-    githubIcon.href = `https://github.com/${user.github.value}`;
-}
-user.github.addEventListener('change', addGithub);
+    //     colorName.classList.add('.palette3-name');
+    //     colorVertLine.classList.add('.palette3-line');
+    //     colorIcons.classList.add('.palette3-icons');
+    // }
+
+    // paletteOne.addEventListener('click', applyPaletteOne);
+
+
+    //VERSIÓN 1
+
+
+    // if (colorInputs.value === 'palette1') {
+    //     colorName.classList.add('.palette1-name');
+    //     colorVertLine.classList.add('.palette1-line');
+    //     colorIcons.classList.add('.palette1-icons');
+
+    //     colorName.classList.remove('.palette2-name');
+    //     colorVertLine.classList.remove('.palette2-line');
+    //     colorIcons.classList.remove('.palette2-icons');
+
+    //     colorName.classList.remove('.palette3-name');
+    //     colorVertLine.classList.remove('.palette3-line');
+    //     colorIcons.classList.remove('.palette3-icons');
+    // }
+
+
+    // if (colorInputs.value === 'palette2') {
+    //     colorName.classList.remove('.palette1-name');
+    //     colorVertLine.classList.remove('.palette1-line');
+    //     colorIcons.classList.remove('.palette1-icons');
+
+    //     colorName.classList.add('.palette2-name');
+    //     colorVertLine.classList.add('.palette2-line');
+    //     colorIcons.classList.add('.palette2-icons');
+
+    //     colorName.classList.remove('.palette3-name');
+    //     colorVertLine.classList.remove('.palette3-line');
+    //     colorIcons.classList.remove('.palette3-icons');
+    // }
+
+    // if (colorInputs.value === 'palette3') {
+    //     colorName.classList.remove('.palette1-name');
+    //     colorVertLine.classList.remove('.palette1-line');
+    //     colorIcons.classList.remove('.palette1-icons');
+
+    //     colorName.classList.remove('.palette2-name');
+    //     colorVertLine.classList.remove('.palette2-line');
+    //     colorIcons.classList.remove('.palette2-icons');
+
+    //     colorName.classList.add('.palette3-name');
+    //     colorVertLine.classList.add('.palette3-line');
+    //     colorIcons.classList.add('.palette3-icons');
+    // }
+
+
+
+
+
+
+    const arrowDesign = document.querySelectorAll('#arrowDesign');
+    const arrowFillIn = document.querySelectorAll('#arrowFillIn');
+    const arrowShare = document.querySelectorAll('#arrowShare');
+    const design = document.querySelector('#design');
+    const fillIn = document.querySelector('#fillIn');
+    const share = document.querySelector('#share');
+
+    const user = {};
+    user.name = document.querySelector('#name');
+    user.job = document.querySelector('#job-title');
+    user.email = document.querySelector('#email');
+    user.tel = document.querySelector('#tel');
+    user.linkedin = document.querySelector('#linkedin');
+    user.github = document.querySelector('#github');
+
+    const resetButton = document.querySelector('.reset');
+
+    const previewCardName = document.querySelector('.preview_card-name');
+    const previewCardJob = document.querySelector('.preview_card-job');
+    const phoneIcon = document.querySelector('#phone-icon');
+    const emailIcon = document.querySelector('#email-icon');
+    const linkedinIcon = document.querySelector('#linkedin-icon');
+    const githubIcon = document.querySelector('#github-icon');
+
+
+    // start page functions
+
+    fillIn.classList.add('hidden');
+    share.classList.add('hidden');
+
+    function hideDesign() {
+        design.classList.toggle('hidden');
+        fillIn.classList.add('hidden');
+        share.classList.add('hidden');
+
+    }
+    arrowDesign.forEach(function (arrow) {
+        arrow.addEventListener('click', hideDesign);
+    })
+
+    function toggleFillIn() {
+        fillIn.classList.toggle('hidden');
+        design.classList.add('hidden');
+        share.classList.add('hidden');
+    }
+    arrowFillIn.forEach(function (arrow) {
+        arrow.addEventListener('click', toggleFillIn);
+    })
+
+    function toggleShare() {
+        share.classList.toggle('hidden');
+        design.classList.add('hidden');
+        fillIn.classList.add('hidden');
+    }
+    arrowShare.forEach(function (arrow) {
+        arrow.addEventListener('click', toggleShare);
+    })
+
+    //COLORS
+
+    //RESET
+
+    function resetInput() {
+        previewCardName.innerHTML = 'Nombre completo';
+        previewCardJob.innerHTML = 'Programadora Front-end';
+        /*phoneIcon.href = '';*/
+        emailIcon.href = '';
+        linkedinIcon.href = '';
+        githubIcon.href = '';
+    };
+    resetButton.addEventListener('click', resetInput)
+
+
+    //INPUTS
+
+    //nombre
+
+    function addName() {
+        previewCardName.innerHTML = user.name.value;
+    }
+    user.name.addEventListener('keyup', addName);
+
+    //puesto
+
+    function addJob() {
+        previewCardJob.innerHTML = user.job.value;
+    }
+    user.job.addEventListener('keyup', addJob);
+
+    //telefono
+
+    /*function addPhone() {
+        phoneIcon.href = user.tel.value;
+    }
+    user.tel.addEventListener('change', addPhone);*/
+
+    //email
+
+    function addEmail() {
+        emailIcon.href = `mailto: ${user.email.value}`;
+    }
+
+    email.addEventListener('change', addEmail);
+
+    //linkedin
+
+    function addLinkedin() {
+        linkedinIcon.href = user.linkedin.value;
+    }
+    user.linkedin.addEventListener('change', addLinkedin);
+
+    //github
+
+    function addGithub() {
+        githubIcon.href = `https://github.com/${user.github.value}`;
+    }
+    user.github.addEventListener('change', addGithub);
 
 
 
