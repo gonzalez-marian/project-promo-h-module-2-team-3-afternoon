@@ -117,10 +117,10 @@ user.job.addEventListener('keyup', addJob);
 
 //telefono
 
-/*function addPhone() {
-    phoneIcon.href = user.tel.value;
+function addPhone() {
+    phoneIcon.href = `tel:${user.tel.value}`;
 }
-user.tel.addEventListener('change', addPhone);*/
+user.tel.addEventListener('change', addPhone);
 
 //email
 
