@@ -24,7 +24,10 @@ const phoneIcon = document.querySelector('#phone-icon');
 const emailIcon = document.querySelector('#email-icon');
 const linkedinIcon = document.querySelector('#linkedin-icon');
 const githubIcon = document.querySelector('#github-icon');
-const iconItems = document.querySelector('.item');
+const phoneItem = document.querySelector('.item_phone');
+const emailItem = document.querySelector('.item_email');
+const linkedinItem = document.querySelector('.item_linkedin');
+const githubItem = document.querySelector('.item_github');
 
 
 // start page functions
@@ -67,7 +70,7 @@ arrowShare.forEach(function (arrow) {
 function resetInput() {
     previewCardName.innerHTML = 'Nombre Apellido';
     previewCardJob.innerHTML = 'Front-end developer';
-    /*phoneIcon.href = '';*/
+    phoneIcon.href = '';
     emailIcon.href = '';
     linkedinIcon.href = '';
     githubIcon.href = '';
@@ -93,16 +96,17 @@ user.job.addEventListener('keyup', addJob);
 
 //telefono
 
-/*function addPhone() {
+function addPhone() {
     phoneIcon.href = user.tel.value;
+    phoneItem.classList.remove('hidden');
 }
-user.tel.addEventListener('change', addPhone);*/
+user.tel.addEventListener('change', addPhone);
 
 //email
 
 function addEmail() {
     emailIcon.href = `mailto: ${user.email.value}`;
-    iconItems.classList.remove('hidden');
+    emailItem.classList.remove('hidden');
 }
 
 user.email.addEventListener('change', addEmail);
@@ -111,7 +115,7 @@ user.email.addEventListener('change', addEmail);
 
 function addLinkedin() {
     linkedinIcon.href = `${user.linkedin.value}`;
-    iconItems.classList.remove('hidden');
+    linkedinItem.classList.remove('hidden');
 }
 user.linkedin.addEventListener('change', addLinkedin);
 
@@ -119,7 +123,7 @@ user.linkedin.addEventListener('change', addLinkedin);
 
 function addGithub() {
     githubIcon.href = `http://github.com/${user.github.value}`;
-    iconItems.classList.remove('hidden');
+    githubItem.classList.remove('hidden');
 }
 user.github.addEventListener('change', addGithub);
 
