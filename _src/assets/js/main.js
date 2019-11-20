@@ -1,9 +1,9 @@
 'use strict';
 
 
-const arrowDesign = document.querySelectorAll('#arrowDesign');
-const arrowFillIn = document.querySelectorAll('#arrowFillIn');
-const arrowShare = document.querySelectorAll('#arrowShare');
+const arrowDesign = document.querySelector('#arrowDesign');
+const arrowFillIn = document.querySelector('#arrowFillIn');
+const arrowShare = document.querySelector('#arrowShare');
 const design = document.querySelector('#design');
 const fillIn = document.querySelector('#fillIn');
 const share = document.querySelector('#share');
@@ -30,6 +30,7 @@ const iconButtons = document.querySelectorAll('.item_btn');
 
 // start page functions
 
+arrowDesign.classList.add('rotate');
 fillIn.classList.add('hidden');
 share.classList.add('hidden');
 
@@ -37,29 +38,33 @@ function hideDesign() {
     design.classList.toggle('hidden');
     fillIn.classList.add('hidden');
     share.classList.add('hidden');
+    arrowDesign.classList.toggle('rotate');
+    arrowFillIn.classList.remove('rotate');
+    arrowShare.classList.remove('rotate');
 
 }
-arrowDesign.forEach(function (arrow) {
-    arrow.addEventListener('click', hideDesign);
-})
+arrowDesign.addEventListener('click', hideDesign);
 
 function toggleFillIn() {
     fillIn.classList.toggle('hidden');
     design.classList.add('hidden');
     share.classList.add('hidden');
+    arrowDesign.classList.remove('rotate');
+    arrowFillIn.classList.toggle('rotate');
+    arrowShare.classList.remove('rotate');
+
 }
-arrowFillIn.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleFillIn);
-})
+arrowFillIn.addEventListener('click', toggleFillIn);
 
 function toggleShare() {
     share.classList.toggle('hidden');
     design.classList.add('hidden');
     fillIn.classList.add('hidden');
+    arrowShare.classList.toggle('rotate');
+    arrowDesign.classList.remove('rotate');
+    arrowFillIn.classList.remove('rotate');
 }
-arrowShare.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleShare);
-})
+arrowShare.addEventListener('click', toggleShare);
 
 //COLORS
 const palette2 = document.querySelector('#fieldset__design--palette-2');
