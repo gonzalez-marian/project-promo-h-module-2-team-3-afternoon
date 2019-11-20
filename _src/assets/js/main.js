@@ -1,9 +1,9 @@
 'use strict';
 
 
-const arrowDesign = document.querySelectorAll('#arrowDesign');
-const arrowFillIn = document.querySelectorAll('#arrowFillIn');
-const arrowShare = document.querySelectorAll('#arrowShare');
+const arrowDesign = document.querySelector('#arrowDesign');
+const arrowFillIn = document.querySelector('#arrowFillIn');
+const arrowShare = document.querySelector('#arrowShare');
 const design = document.querySelector('#design');
 const fillIn = document.querySelector('#fillIn');
 const share = document.querySelector('#share');
@@ -28,10 +28,13 @@ const phoneItem = document.querySelector('.item_phone');
 const emailItem = document.querySelector('.item_email');
 const linkedinItem = document.querySelector('.item_linkedin');
 const githubItem = document.querySelector('.item_github');
+const iconItems = document.querySelectorAll('#preview_card-icons');
+const iconButtons = document.querySelectorAll('.item_btn');
 
 
 // start page functions
 
+arrowDesign.classList.add('rotate');
 fillIn.classList.add('hidden');
 share.classList.add('hidden');
 
@@ -39,31 +42,58 @@ function hideDesign() {
     design.classList.toggle('hidden');
     fillIn.classList.add('hidden');
     share.classList.add('hidden');
+    arrowDesign.classList.toggle('rotate');
+    arrowFillIn.classList.remove('rotate');
+    arrowShare.classList.remove('rotate');
 
 }
-arrowDesign.forEach(function (arrow) {
-    arrow.addEventListener('click', hideDesign);
-})
+arrowDesign.addEventListener('click', hideDesign);
 
 function toggleFillIn() {
     fillIn.classList.toggle('hidden');
     design.classList.add('hidden');
     share.classList.add('hidden');
+    arrowDesign.classList.remove('rotate');
+    arrowFillIn.classList.toggle('rotate');
+    arrowShare.classList.remove('rotate');
+
 }
-arrowFillIn.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleFillIn);
-})
+arrowFillIn.addEventListener('click', toggleFillIn);
 
 function toggleShare() {
     share.classList.toggle('hidden');
     design.classList.add('hidden');
     fillIn.classList.add('hidden');
+    arrowShare.classList.toggle('rotate');
+    arrowDesign.classList.remove('rotate');
+    arrowFillIn.classList.remove('rotate');
 }
-arrowShare.forEach(function (arrow) {
-    arrow.addEventListener('click', toggleShare);
-})
+arrowShare.addEventListener('click', toggleShare);
 
 //COLORS
+const palette2 = document.querySelector('#fieldset__design--palette-2');
+function applyPalette2 (){
+    previewCardName.classList.add('driedBlood');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('driedBlood');
+      }
+    for (const iconButton of iconButtons){
+        iconButton.style.borderColor = '#e95626';
+    }
+}
+palette2.addEventListener('click', applyPalette2);
+
+const palette3 = document.querySelector('#fieldset__design--palette-3');
+function applyPalette3 (){
+    previewCardName.classList.add('slate');
+    for (const iconItem of iconItems) {
+        iconItem.classList.add('slate');
+    }
+    for (const iconButton of iconButtons) {
+        iconButton.style.borderColor = '#a0c0cf';
+    }
+}
+palette3.addEventListener('click', applyPalette3);
 
 //RESET
 
@@ -101,7 +131,7 @@ user.job.addEventListener('keyup', addJob);
 //telefono
 
 function addPhone() {
-    phoneIcon.href = user.tel.value;
+    phoneIcon.href = `tel:${user.tel.value}`;
     phoneItem.classList.remove('hidden');
 }
 user.tel.addEventListener('change', addPhone);
@@ -199,26 +229,3 @@ user.github.addEventListener('change', addGithub);
 //     }
 // }
 
-
-// // DOM listeners
-
-// selectedPalette.addEventListener('click', applyPalette);
-// selectedSection.addEventListener('click', displaySection);
-// resetButton.addEventListener('reset', resetInfo);
-
-// name.addEventListener('keyup', handleInput);
-// job.addEventListener('keyup', handleInput);
-// email.addEventListener('keyup', handleInput);
-// tel.addEventListener('keyup', handleInput);
-// linkedin.addEventListener('keyup', handleInput);
-// github.addEventListener('keyup', handleInput);
-
-// email.addEventListener('change', atSignCheck);
-// tel.addEventListener('change', phoneCheck);
-// linkedin.addEventListener('change', atSignCheck);
-// github.addEventListener('change', atSignCheck);
-
-
-// // init page
-
-// init();
