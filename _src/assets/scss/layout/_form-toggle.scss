@@ -177,7 +177,7 @@
 .input{
     width: 100%;
     padding-left: 10px;
-    color: #c5c5c5;
+    color: $black-32;
     @include text-open-14;
     border: solid 1px $hospital-green;
 }
