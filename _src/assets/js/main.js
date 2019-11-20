@@ -74,6 +74,10 @@ function resetInput() {
     emailIcon.href = '';
     linkedinIcon.href = '';
     githubIcon.href = '';
+    phoneItem.classList.add('hidden');
+    emailItem.classList.add('hidden');
+    linkedinItem.classList.add('hidden');
+    githubItem.classList.add('hidden');
 };
 resetButton.addEventListener('click', resetInput)
 
