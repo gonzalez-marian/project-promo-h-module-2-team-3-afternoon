@@ -102,13 +102,13 @@
 
 
 .form_wrapper{
-    //max-width: 400px;
     margin: 0px 20px;
     align-self: center;
+    padding-top: 15px;
 }
 .fieldset{
     border-bottom: 1px solid $white-two;
-    padding: 20px 0 30px;
+    padding-bottom: 10px;
 }
 .form_title-container{
     display: flex;
