@@ -18,6 +18,7 @@ user.github = document.querySelector('#github');
 
 const resetButton = document.querySelector('.reset');
 
+const previewCardHead = document.querySelector('.preview_card-head');
 const previewCardName = document.querySelector('.preview_card-name');
 const previewCardJob = document.querySelector('.preview_card-job');
 const phoneIcon = document.querySelector('#phone-icon');
@@ -77,6 +78,9 @@ function applyPalette1 (){
     previewCardName.classList.add('darkGreenBlue');
     previewCardName.classList.remove('driedBlood');
     previewCardName.classList.remove('slate');
+    previewCardHead.classList.add('borderPalette1');
+    previewCardHead.classList.remove('borderPalette2');
+    previewCardHead.classList.remove('borderPalette3');
     for (const iconItem of iconItems) {
         iconItem.classList.add('darkGreenBlue');
         iconItem.classList.remove('driedBlood');
@@ -93,6 +97,10 @@ function applyPalette2 (){
     previewCardName.classList.add('driedBlood');
     previewCardName.classList.remove('darkGreenBlue');
     previewCardName.classList.remove('slate');
+
+    previewCardHead.classList.add('borderPalette2');
+    previewCardHead.classList.remove('borderPalette1');
+    previewCardHead.classList.remove('borderPalette3');
     for (const iconItem of iconItems) {
         iconItem.classList.add('driedBlood');
         iconItem.classList.remove('darkGreenBlue');
@@ -109,6 +117,10 @@ function applyPalette3 (){
     previewCardName.classList.add('slate');
     previewCardName.classList.remove('driedBlood');
     previewCardName.classList.remove('darkGreenBlue');
+
+    previewCardHead.classList.add('borderPalette3');
+    previewCardHead.classList.remove('borderPalette1');
+    previewCardHead.classList.remove('borderPalette2');
     for (const iconItem of iconItems) {
         iconItem.classList.add('slate');
         iconItem.classList.remove('driedBlood');
