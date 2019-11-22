@@ -28,6 +28,7 @@
         line-height: 20px;
         color: $gunmetal;
         text-transform: uppercase;
+        cursor: pointer;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -118,7 +119,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 .form_title{
     @include text-open-18-600;
@@ -230,6 +232,7 @@
         box-shadow: 0 1px 6px 0 $black-32;
         background-color: $dull-orange;
         color: $white-full;
+        cursor: pointer;
         &:disabled{
             background-color: $black-32;
         }
