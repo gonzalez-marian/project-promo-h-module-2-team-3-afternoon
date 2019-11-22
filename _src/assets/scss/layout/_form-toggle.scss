@@ -28,6 +28,9 @@
         line-height: 20px;
         color: $gunmetal;
         text-transform: uppercase;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         &:hover {
             border: solid 2px $dark-green-blue;
             color: $dark-green-blue;
