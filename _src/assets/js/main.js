@@ -1,6 +1,8 @@
 'use strict';
 
-
+const designContainer = document.querySelector('#designContainer');
+const fillInContainer = document.querySelector('#fillInContainer');
+const shareContainer = document.querySelector('#shareContainer');
 const arrowDesign = document.querySelector('#arrowDesign');
 const arrowFillIn = document.querySelector('#arrowFillIn');
 const arrowShare = document.querySelector('#arrowShare');
@@ -48,7 +50,7 @@ function hideDesign() {
     arrowShare.classList.remove('rotate');
 
 }
-arrowDesign.addEventListener('click', hideDesign);
+designContainer.addEventListener('click', hideDesign);
 
 function toggleFillIn() {
     fillIn.classList.toggle('hidden');
@@ -59,7 +61,7 @@ function toggleFillIn() {
     arrowShare.classList.remove('rotate');
 
 }
-arrowFillIn.addEventListener('click', toggleFillIn);
+fillInContainer.addEventListener('click', toggleFillIn);
 
 function toggleShare() {
     share.classList.toggle('hidden');
@@ -69,12 +71,12 @@ function toggleShare() {
     arrowDesign.classList.remove('rotate');
     arrowFillIn.classList.remove('rotate');
 }
-arrowShare.addEventListener('click', toggleShare);
+shareContainer.addEventListener('click', toggleShare);
 
 //COLORS
 
 const palette1 = document.querySelector('#fieldset__design--palette-1');
-function applyPalette1 (){
+function applyPalette1() {
     previewCardName.classList.add('darkGreenBlue');
     previewCardName.classList.remove('driedBlood');
     previewCardName.classList.remove('slate');
@@ -85,15 +87,15 @@ function applyPalette1 (){
         iconItem.classList.add('darkGreenBlue');
         iconItem.classList.remove('driedBlood');
         iconItem.classList.remove('slate');
-      }
-    for (const iconButton of iconButtons){
+    }
+    for (const iconButton of iconButtons) {
         iconButton.style.borderColor = '#a2deaf';
     }
 }
 palette1.addEventListener('click', applyPalette1);
 
 const palette2 = document.querySelector('#fieldset__design--palette-2');
-function applyPalette2 (){
+function applyPalette2() {
     previewCardName.classList.add('driedBlood');
     previewCardName.classList.remove('darkGreenBlue');
     previewCardName.classList.remove('slate');
@@ -105,15 +107,15 @@ function applyPalette2 (){
         iconItem.classList.add('driedBlood');
         iconItem.classList.remove('darkGreenBlue');
         iconItem.classList.remove('slate');
-      }
-    for (const iconButton of iconButtons){
+    }
+    for (const iconButton of iconButtons) {
         iconButton.style.borderColor = '#e95626';
     }
 }
 palette2.addEventListener('click', applyPalette2);
 
 const palette3 = document.querySelector('#fieldset__design--palette-3');
-function applyPalette3 (){
+function applyPalette3() {
     previewCardName.classList.add('slate');
     previewCardName.classList.remove('driedBlood');
     previewCardName.classList.remove('darkGreenBlue');
