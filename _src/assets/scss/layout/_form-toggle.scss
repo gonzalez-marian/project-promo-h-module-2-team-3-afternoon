@@ -181,6 +181,7 @@
 .input{
     width: 100%;
     padding-left: 10px;
+    color: $black-32;
     @include text-open-14;
     border: solid 1px $hospital-green;
 }
