@@ -29,6 +29,9 @@
         color: $gunmetal;
         text-transform: uppercase;
         cursor: pointer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         &:hover {
             border: solid 2px $dark-green-blue;
             color: $dark-green-blue;
@@ -109,7 +112,7 @@
 }
 .fieldset{
     border-bottom: 1px solid $white-two;
-    padding-bottom: 10px;
+    
 }
 .form_title-container{
     display: flex;
@@ -151,7 +154,9 @@
         display: inline-block;
     }
 }
-
+.palette-container{
+    padding-bottom: 10px;
+}
 #fieldset__design--{
     &palette-1, &palette-2, &palette-3{
         vertical-align: 30%;
@@ -183,7 +188,6 @@
 .input{
     width: 100%;
     padding-left: 10px;
-    color: $black-32;
     @include text-open-14;
     border: solid 1px $hospital-green;
 }
