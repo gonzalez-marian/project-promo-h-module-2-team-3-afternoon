@@ -111,14 +111,14 @@
 }
 .fieldset{
     border-bottom: 1px solid $white-two;
-    padding-bottom: 10px;
+    
 }
 .form_title-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    
 }
 .form_title{
     @include text-open-18-600;
@@ -152,7 +152,9 @@
         display: inline-block;
     }
 }
-
+.palette-container{
+    padding-bottom: 10px;
+}
 #fieldset__design--{
     &palette-1, &palette-2, &palette-3{
         vertical-align: 30%;
