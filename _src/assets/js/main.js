@@ -1,5 +1,7 @@
 'use strict';
 
+//CONSTANTS DECLARATION
+
 const designContainer = document.querySelector('#designContainer');
 const fillInContainer = document.querySelector('#fillInContainer');
 const shareContainer = document.querySelector('#shareContainer');
@@ -10,6 +12,14 @@ const design = document.querySelector('#design');
 const fillIn = document.querySelector('#fillIn');
 const share = document.querySelector('#share');
 
+const palette1 = document.querySelector('#fieldset__design--palette-1');
+const palette2 = document.querySelector('#fieldset__design--palette-2');
+const palette3 = document.querySelector('#fieldset__design--palette-3');
+
+
+const resetButton = document.querySelector('.reset');
+
+//Constants with user data
 const user = {};
 user.name = document.querySelector('#name');
 user.job = document.querySelector('#job-title');
@@ -17,8 +27,6 @@ user.email = document.querySelector('#email');
 user.tel = document.querySelector('#tel');
 user.linkedin = document.querySelector('#linkedin');
 user.github = document.querySelector('#github');
-
-const resetButton = document.querySelector('.reset');
 
 const previewCardHead = document.querySelector('.preview_card-head');
 const previewCardName = document.querySelector('.preview_card-name');
@@ -35,7 +43,10 @@ const iconItems = document.querySelectorAll('#preview_card-icons');
 const iconButtons = document.querySelectorAll('.item_btn');
 
 
+
 // start page functions
+
+//MENU TOGGLE
 
 arrowDesign.classList.add('rotate');
 fillIn.classList.add('hidden');
@@ -73,9 +84,12 @@ function toggleShare() {
 }
 shareContainer.addEventListener('click', toggleShare);
 
-//COLORS
+//PALETTE
 
-const palette1 = document.querySelector('#fieldset__design--palette-1');
+// function addClass = (name, class) => {
+//     name.classList.add('(class)');
+// }
+
 function applyPalette1() {
     previewCardName.classList.add('darkGreenBlue');
     previewCardName.classList.remove('driedBlood');
@@ -94,7 +108,7 @@ function applyPalette1() {
 }
 palette1.addEventListener('click', applyPalette1);
 
-const palette2 = document.querySelector('#fieldset__design--palette-2');
+
 function applyPalette2() {
     previewCardName.classList.add('driedBlood');
     previewCardName.classList.remove('darkGreenBlue');
@@ -114,7 +128,7 @@ function applyPalette2() {
 }
 palette2.addEventListener('click', applyPalette2);
 
-const palette3 = document.querySelector('#fieldset__design--palette-3');
+
 function applyPalette3() {
     previewCardName.classList.add('slate');
     previewCardName.classList.remove('driedBlood');
@@ -134,7 +148,7 @@ function applyPalette3() {
 }
 palette3.addEventListener('click', applyPalette3);
 
-//RESET
+//RESET BUTTON
 
 function resetInput() {
     previewCardName.innerHTML = 'Nombre Apellido';
@@ -149,57 +163,6 @@ function resetInput() {
     githubItem.classList.add('hidden');
 };
 resetButton.addEventListener('click', resetInput)
-
-
-//INPUTS
-
-//nombre
-
-function addName() {
-    previewCardName.innerHTML = user.name.value;
-}
-user.name.addEventListener('keyup', addName);
-
-//puesto
-
-function addJob() {
-    previewCardJob.innerHTML = user.job.value;
-}
-user.job.addEventListener('keyup', addJob);
-
-//telefono
-
-function addPhone() {
-    phoneIcon.href = `tel:${user.tel.value}`;
-    phoneItem.classList.remove('hidden');
-}
-user.tel.addEventListener('change', addPhone);
-
-//email
-
-function addEmail() {
-    emailIcon.href = `mailto: ${user.email.value}`;
-    emailItem.classList.remove('hidden');
-}
-
-user.email.addEventListener('change', addEmail);
-
-//linkedin
-
-function addLinkedin() {
-    linkedinIcon.href = `${user.linkedin.value}`;
-    linkedinItem.classList.remove('hidden');
-}
-user.linkedin.addEventListener('change', addLinkedin);
-
-//github
-
-function addGithub() {
-    githubIcon.href = `http://github.com/${user.github.value}`;
-    githubItem.classList.remove('hidden');
-}
-user.github.addEventListener('change', addGithub);
-
 
 
 
