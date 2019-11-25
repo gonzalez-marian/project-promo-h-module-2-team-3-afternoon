@@ -1,6 +1,6 @@
 //FOOTER
 .landing_wrapper{
-  width: 100%;
+  width: 100vw;
 }
 .footer__container{
   width: 100%;
@@ -26,17 +26,16 @@
     font-size: rem(14);
     line-height: rem (20);
     color: $brownish-grey;
-    margin: 0;
     /*padding: 20px 0 10px;*/
     @include for-tablet-up{
       padding: 20px 41px;
     }
   }
   .footer__logo{
-    margin: 12px 0 0 0;
+    margin: 12px 0 20px 0;
     height: 40px;
     @include for-tablet-up{
-      margin: 0px 41px 0 41px;
+      margin: 10px 41px;
     }
     
   }
