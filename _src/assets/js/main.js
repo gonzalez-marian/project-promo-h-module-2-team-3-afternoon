@@ -160,16 +160,7 @@ function addName() {
 }
 user.name.addEventListener('keyup', addName);
 
-function verifyName() {
-    const regName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-    if (!regName.test(user.name.value)) {
-        // const verifyNameMessage = document.createElement('span');
-        // verifyNameMessage.innerHTML = 'Por favor, introduzca su nombre'
-        user.name.insertAdjacentElement('afterend', verifyNameMessage)
-    }
-}
-user.name.addEventListener('change', verifyName);
-console.log(verifyName())
+
 //puesto
 
 function addJob() {
@@ -211,6 +202,66 @@ function addGithub() {
 user.github.addEventListener('change', addGithub);
 
 ///////// validacion del formulario //////
+const submitButton = document.querySelector('.create_card-btn');
+
+function validateForm() {
+    let isCorrect = true;
+
+    const regNameJob = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    if (!regNameJob.test(user.name.value)) {
+        isCorrect = false;
+    }
+    if (!regNameJob.test(user.job.value)) {
+        isCorrect = false;
+    }
+
+    const regEmail = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+    if (!regEmail.test(user.email.value)) {
+        isCorrect = false;
+    }
+
+    const regUrl = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?:: (\d +))?(?: \/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    if (!regUrl.test(user.linkedin.value)) {
+        isCorrect = false;
+    }
+
+    if (!isCorrect) {
+        alert('Algunos campos no son correctos');
+    }
+    return isCorrect;
+
+    console.log('la validacion funciona');
+}
+
+submitButton.addEventListener('click', validateForm);
+
+
+// function verifyName() {
+//     const regName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+//     if (!regName.test(user.name.value)) {
+//         // const verifyNameMessage = document.createElement('span');
+//         // verifyNameMessage.innerHTML = 'Por favor, introduzca su nombre'
+//         //user.name.insertAdjacentElement('afterend', verifyNameMessage)
+//     }
+// }
+// user.name.addEventListener('change', verifyName);
+// console.log(verifyName())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
