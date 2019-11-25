@@ -137,13 +137,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
     cursor: pointer;
 }
 .form_title{
     @include text-open-18-600;
     color: $gunmetal;
-    margin: 10px 0;
+    margin: 12px 0;
 
     &-icon{
         color: $dull-orange;
@@ -179,6 +178,9 @@
     &palette-1, &palette-2, &palette-3{
         vertical-align: 30%;
     }
+}
+#github {
+    margin-bottom: 34px;
 }
 
 .palette1-{

@@ -1,29 +1,5 @@
 'use strict';
 
-const user = {};
-user.name = document.querySelector('#name');
-user.job = document.querySelector('#job-title');
-user.email = document.querySelector('#email');
-user.tel = document.querySelector('#tel');
-user.linkedin = document.querySelector('#linkedin');
-user.github = document.querySelector('#github');
-
-const resetButton = document.querySelector('.reset');
-
-const previewCardHead = document.querySelector('.preview_card-head');
-const previewCardName = document.querySelector('.preview_card-name');
-const previewCardJob = document.querySelector('.preview_card-job');
-const phoneIcon = document.querySelector('#phone-icon');
-const emailIcon = document.querySelector('#email-icon');
-const linkedinIcon = document.querySelector('#linkedin-icon');
-const githubIcon = document.querySelector('#github-icon');
-const phoneItem = document.querySelector('.item_phone');
-const emailItem = document.querySelector('.item_email');
-const linkedinItem = document.querySelector('.item_linkedin');
-const githubItem = document.querySelector('.item_github');
-const iconItems = document.querySelectorAll('#preview_card-icons');
-const iconButtons = document.querySelectorAll('.item_btn');
-
 
 
 //RESET
@@ -48,47 +24,47 @@ resetButton.addEventListener('click', resetInput)
 //nombre
 
 function addName() {
-    previewCardName.innerHTML = user.name.value;
+    previewCardName.innerHTML = userName.value;
 }
-user.name.addEventListener('keyup', addName);
+userName.addEventListener('keyup', addName);
 
 //puesto
 
 function addJob() {
-    previewCardJob.innerHTML = user.job.value;
+    previewCardJob.innerHTML = userJob.value;
 }
-user.job.addEventListener('keyup', addJob);
+userJob.addEventListener('keyup', addJob);
 
 //telefono
 
 function addPhone() {
-    phoneIcon.href = `tel:${user.tel.value}`;
+    phoneIcon.href = `tel:${userTel.value}`;
     phoneItem.classList.remove('hidden');
 }
-user.tel.addEventListener('change', addPhone);
+userTel.addEventListener('change', addPhone);
 
 //email
 
 function addEmail() {
-    emailIcon.href = `mailto: ${user.email.value}`;
+    emailIcon.href = `mailto: ${userEmail.value}`;
     emailItem.classList.remove('hidden');
 }
 
-user.email.addEventListener('change', addEmail);
+userEmail.addEventListener('change', addEmail);
 
 //linkedin
 
 function addLinkedin() {
-    linkedinIcon.href = `${user.linkedin.value}`;
+    linkedinIcon.href = `${userLinkedin.value}`;
     linkedinItem.classList.remove('hidden');
 }
-user.linkedin.addEventListener('change', addLinkedin);
+userLinkedin.addEventListener('change', addLinkedin);
 
 //github
 
 function addGithub() {
-    githubIcon.href = `http://github.com/${user.github.value}`;
+    githubIcon.href = `http://github.com/${userGithub.value}`;
     githubItem.classList.remove('hidden');
 }
-user.github.addEventListener('change', addGithub);
+userGithub.addEventListener('change', addGithub);
 

@@ -1,16 +1,6 @@
 'use strict'
 
 
-const designContainer = document.querySelector('#designContainer');
-const fillInContainer = document.querySelector('#fillInContainer');
-const shareContainer = document.querySelector('#shareContainer');
-const arrowDesign = document.querySelector('#arrowDesign');
-const arrowFillIn = document.querySelector('#arrowFillIn');
-const arrowShare = document.querySelector('#arrowShare');
-const design = document.querySelector('#design');
-const fillIn = document.querySelector('#fillIn');
-const share = document.querySelector('#share');
-
 // start page functions
 
 arrowDesign.classList.add('rotate');
