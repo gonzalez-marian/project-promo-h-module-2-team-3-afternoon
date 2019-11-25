@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <form action="" method="get" class="form_wrapper">
+    <form action="" onsubmit="return formValidation()" method="post" class="form_wrapper">
         <fieldset class="fieldset fieldset__design">
             <div id="designContainer" class="form_title-container">
                 <legend class="form_title"><i class="far fa-object-ungroup form_title-icon"></i>DISEÑA</legend>
@@ -118,7 +118,8 @@
             </div>
             <div class="share" id="share">
                 <div class="create_card">
-                    <button type="submit" class="create_card-btn"><i class="far fa-address-card"> CREAR TARJETA</i></button>
+                    <button type="submit" class="create_card-btn"><i class="far fa-address-card"> CREAR
+                            TARJETA</i></button>
                 </div>
                 <div class="twitter">
                     <span class="twitter-message">La tarjeta ha sido creada:</span>

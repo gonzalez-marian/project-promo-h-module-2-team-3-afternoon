@@ -160,13 +160,13 @@ function addName() {
 }
 user.name.addEventListener('keyup', addName);
 
-function verifyName () {
+function verifyName() {
     const regName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     if (!regName.test(user.name.value)) {
-       const verifyNameMessage = document.createElement('span');
-       verifyNameMessage.innerHTML = 'Por favor, introduzca su nombre'
-       user.name.insertAdjacentElement('afterend', verifyNameMessage)
-    } 
+        // const verifyNameMessage = document.createElement('span');
+        // verifyNameMessage.innerHTML = 'Por favor, introduzca su nombre'
+        user.name.insertAdjacentElement('afterend', verifyNameMessage)
+    }
 }
 user.name.addEventListener('change', verifyName);
 console.log(verifyName())
@@ -210,6 +210,7 @@ function addGithub() {
 }
 user.github.addEventListener('change', addGithub);
 
+///////// validacion del formulario //////
 
 
 
