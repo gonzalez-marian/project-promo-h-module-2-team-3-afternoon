@@ -22,6 +22,8 @@ const userEmail = document.querySelector('#email');
 const userTel = document.querySelector('#tel');
 const userLinkedin = document.querySelector('#linkedin');
 const userGithub = document.querySelector('#github');
+const createCardButton = document.querySelector('#createCardButton');
+const twitterMessage = document.querySelector('#twitterMessage');
 
 const resetButton = document.querySelector('.reset');
 
