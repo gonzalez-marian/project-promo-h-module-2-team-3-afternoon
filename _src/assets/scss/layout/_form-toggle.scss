@@ -1,5 +1,8 @@
 .hidden{
-    display: none;
+    display: none; 
+}
+.opacity {
+    opacity: 0.6;
 }
 .main{
     background-image: linear-gradient(to bottom, #f5f5f5, $white-full 9%);
