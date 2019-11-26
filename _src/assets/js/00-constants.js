@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const designContainer = document.querySelector('#designContainer');
 const fillInContainer = document.querySelector('#fillInContainer');
@@ -22,6 +22,7 @@ const userEmail = document.querySelector('#email');
 const userTel = document.querySelector('#tel');
 const userLinkedin = document.querySelector('#linkedin');
 const userGithub = document.querySelector('#github');
+const createCardBtn = document.querySelector('#createCardBtn');
 
 const resetButton = document.querySelector('.reset');
 
