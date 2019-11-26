@@ -12,7 +12,7 @@ function sendForm (event) {
     "email": userEmail.value,
     "linkedin": userLinkedin.value,
     "github": userGithub.value,
-    //"photo": photoSend
+    "photo": fr.result,
  };
  //petición
  fetch ('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
@@ -32,6 +32,7 @@ function showURL (data) {
     twitterURL.innerHTML = `<a class="twitter-url" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
     twitterMessage.insertAdjacentElement('afterend', twitterURL);
     shareTwitter(data.cardURL);
+    console.log(data.cardURL)
     //showTwitterSection();
     //showTwitter();
 } else {
