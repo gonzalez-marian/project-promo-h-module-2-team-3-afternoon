@@ -7,7 +7,7 @@
                     <h2 class="preview_card-name">nombre apellido</h2>
                     <h3 class="preview_card-job">Front-end developer</h3>
                 </div>
-                <img src="http://via.placeholder.com/240x200">
+                <div class="preview_card-image js__profile-image"></div>
                 <ul class="preview_card-social">
                     <li class="item item_phone hidden">
                         <a class="item_btn" id="phone-icon">
@@ -90,10 +90,11 @@
                     required>
 
                 <label class="input_label" for="photo">Imagen de perfil *</label>
-                <input id="photo" type="file" name="photo" class="photo" value="Añadir imagen" required>
+                <input id="photo" type="file" name="photo" class="photo js__profile-upload-btn" value="Añadir imagen"
+                    required>
                 <div class="add-image-container">
-                    <button class="btn-add-image">Añadir imagen</button>
-                    <div class="preview-image"></div>
+                    <button class="btn-add-image js__profile-trigger">Añadir imagen</button>
+                    <div class="preview-image js__profile-preview"></div>
                 </div>
 
                 <label class="input_label" for="email">Email *</label>
@@ -118,7 +119,8 @@
             </div>
             <div class="share" id="share">
                 <div class="create_card">
-                    <button type="submit" class="create_card-btn"><i class="far fa-address-card"> CREAR TARJETA</i></button>
+                    <button type="submit" class="create_card-btn"><i class="far fa-address-card"> CREAR
+                            TARJETA</i></button>
                 </div>
                 <div class="twitter">
                     <span class="twitter-message">La tarjeta ha sido creada:</span>
