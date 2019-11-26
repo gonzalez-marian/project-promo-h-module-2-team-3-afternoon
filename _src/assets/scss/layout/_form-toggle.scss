@@ -234,6 +234,8 @@
 .preview-image{
     width: 30px;
     height: 30px;
+    background: top center no-repeat;
+    background-size: cover;
     border: solid 1px $hospital-green;
     display: inline-block;
     margin-left: 20px;
