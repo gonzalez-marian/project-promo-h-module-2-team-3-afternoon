@@ -39,32 +39,32 @@ userJob.addEventListener('keyup', addJob);
 
 function addPhone() {
     phoneIcon.href = `tel:${userTel.value}`;
-    phoneItem.classList.remove('hidden');
+    phoneItem.classList.remove('opacity');
 }
-userTel.addEventListener('change', addPhone);
+userTel.addEventListener('keyup', addPhone);
 
 //email
 
 function addEmail() {
     emailIcon.href = `mailto: ${userEmail.value}`;
-    emailItem.classList.remove('hidden');
+    emailItem.classList.remove('opacity');
 }
 
-userEmail.addEventListener('change', addEmail);
+userEmail.addEventListener('keyup', addEmail);
 
 //linkedin
 
 function addLinkedin() {
     linkedinIcon.href = `${userLinkedin.value}`;
-    linkedinItem.classList.remove('hidden');
+    linkedinItem.classList.remove('opacity');
 }
-userLinkedin.addEventListener('change', addLinkedin);
+userLinkedin.addEventListener('keyup', addLinkedin);
 
 //github
 
 function addGithub() {
     githubIcon.href = `http://github.com/${userGithub.value}`;
-    githubItem.classList.remove('hidden');
+    githubItem.classList.remove('opacity');
 }
-userGithub.addEventListener('change', addGithub);
+userGithub.addEventListener('keyup', addGithub);
 
