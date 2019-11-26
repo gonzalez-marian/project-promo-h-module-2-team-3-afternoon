@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <form action="" onsubmit="return formValidation()" method="post" class="form_wrapper">
+    <form action="" onsubmit='return validateForm()' method="post" class="form_wrapper">
         <fieldset class="fieldset fieldset__design">
             <div id="designContainer" class="form_title-container">
                 <legend class="form_title"><i class="far fa-object-ungroup form_title-icon"></i>DISEÑA</legend>
@@ -104,7 +104,7 @@
                 <input id="tel" class="input" placeholder="123456789" type="tel" name="tel">
 
                 <label class="input_label" for="linkedin">LinkedIn *</label>
-                <input id="linkedin" class="input" placeholder="www.linkedin.com/in/n-apellido" type="text"
+                <input id="linkedin" class="input" placeholder="www.linkedin.com/in/n-apellido" type="url"
                     name="linkedin" required>
 
                 <label class="input_label" for="github">Github *</label>

@@ -160,6 +160,7 @@ function addName() {
 }
 user.name.addEventListener('keyup', addName);
 
+<<<<<<< HEAD
 // function verifyName() {
 //     const regName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
 //     if (!regName.test(user.name.value)) {
@@ -170,6 +171,9 @@ user.name.addEventListener('keyup', addName);
 // }
 // user.name.addEventListener('change', verifyName);
 // console.log(verifyName())
+=======
+
+>>>>>>> 8659b7ad89c8bcf0cf506767e337c177c4ed3324
 //puesto
 
 function addJob() {
@@ -211,46 +215,66 @@ function addGithub() {
 user.github.addEventListener('change', addGithub);
 
 ///////// validacion del formulario //////
-const buttonCreate = document.querySelector('#create__card');
+const submitButton = document.querySelector('.create_card-btn');
 
-function sendInfo() {
-    let hasErrors = false;
+function validateForm() {
+    let isCorrect = true;
 
-    if (user.name.value === '') {
-        user.name.classList.add('error');
-        user.name.classList.remove('');
-        hasErrors = true;
+    const regNameJob = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    if (!regNameJob.test(user.name.value)) {
+        isCorrect = false;
     }
-    if (user.job.value === '') {
-        user.job.classList.add('error');
-        hasErrors = true;
+    if (!regNameJob.test(user.job.value)) {
+        isCorrect = false;
     }
-    if (user.email.value === '') {
-        user.email.classList.add('error');
-        hasErrors = true;
+
+    const regEmail = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+    if (!regEmail.test(user.email.value)) {
+        isCorrect = false;
     }
-    if (user.tel.value === '') {
-        user.tel.classList.add('error');
-        hasErrors = true;
+
+    const regUrl = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?:: (\d +))?(?: \/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    if (!regUrl.test(user.linkedin.value)) {
+        isCorrect = false;
     }
-    if (user.linkedin.value === '') {
-        user.linkedin.classList.add('error');
-        hasErrors = true;
+
+    if (!isCorrect) {
+        alert('Algunos campos no son correctos');
     }
-    if (user.github.value === '') {
-        user.github.classList.add('error');
-        hasErrors = true;
-    }
-    if (hasErrors !== true) {
-        user.name.classList.remove('error');
-        user.job.classList.remove('error');
-        user.email.classList.remove('error');
-        user.tel.classList.remove('error');
-        user.linkedin.classList.remove('error');
-        user.github.classList.remove('error');
-        alert('Datos enviados');
-    }
+    return isCorrect;
+
+    console.log('la validacion funciona');
 }
+
+submitButton.addEventListener('click', validateForm);
+
+
+// function verifyName() {
+//     const regName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+//     if (!regName.test(user.name.value)) {
+//         // const verifyNameMessage = document.createElement('span');
+//         // verifyNameMessage.innerHTML = 'Por favor, introduzca su nombre'
+//         //user.name.insertAdjacentElement('afterend', verifyNameMessage)
+//     }
+// }
+// user.name.addEventListener('change', verifyName);
+// console.log(verifyName())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 buttonCreate.addEventListener('click', sendInfo);
 
