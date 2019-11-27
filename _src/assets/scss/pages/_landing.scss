@@ -120,3 +120,85 @@
         margin: 74px 0 56px 0;
     }
 }
+/*@keyframes intro {
+    from {
+      transform: rotate(-7deg);
+    }
+    to {
+      
+      transform: rotate(7deg);
+    }
+  }*/
+ @keyframes wobble {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    15% {
+      transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+  
+    30% {
+      transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    45% {
+      transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    60% {
+      transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+  
+    75% {
+      transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .wobble {
+    animation-name: wobble;
+  }
+/*.monkey {
+    height: 300px;
+    position: absolute;
+    top: -3px;
+    left: 40px;
+    animation-name: wobble;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}*/
+@keyframes fadeInDown {
+    from {
+      opacity: 1;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    animation-name: fadeInDown;
+  }
+  .monkey {
+    height: 300px;
+    position: absolute;
+    top: -3px;
+    left: 40px;
+    
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    
+  }
+  .monkey{
+    animation-name: wobble;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
