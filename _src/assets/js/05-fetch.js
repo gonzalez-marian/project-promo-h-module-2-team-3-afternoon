@@ -4,6 +4,16 @@ function sendForm(event) {
     event.preventDefault();
 
     //creo json
+    const datos = {
+        "palette": paletteChosen,
+        "name": userName.value,
+        "job": userJob.value,
+        "phone": userTel.value,
+        "email": userEmail.value,
+        "linkedin": userLinkedin.value,
+        "github": userGithub.value,
+        "photo": fr.result,
+    };
 
     //petición
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {

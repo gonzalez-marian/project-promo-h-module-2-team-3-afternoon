@@ -41,13 +41,3 @@ const githubItem = document.querySelector('.item_github');
 const iconItems = document.querySelectorAll('#preview_card-icons');
 const iconButtons = document.querySelectorAll('.item_btn');
 
-const datos = {
-    "palette": paletteChosen,
-    "name": userName.value,
-    "job": userJob.value,
-    "phone": userTel.value,
-    "email": userEmail.value,
-    "linkedin": userLinkedin.value,
-    "github": userGithub.value,
-    "photo": fr.result,
-};

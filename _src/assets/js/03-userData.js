@@ -51,32 +51,43 @@ function addPhone() {
     }
 }
 
+function addEmail() {
+    if (userEmail.value !== '') {
+        emailIcon.href = `mailto: ${userEmail.value}`;
+        emailItem.classList.remove('opacity');
+        localStorage.setItem('email', userEmail.value)
+    } else {
+        emailItem.classList.add('opacity');
+        localStorage.removeItem('email');
+    }
+}
+
+function addLinkedin() {
+    if (userLinkedin.value !== '') {
+        linkedinIcon.href = `${userLinkedin.value}`;
+        linkedinItem.classList.remove('opacity');
+        localStorage.setItem('linkedin', userLinkedin.value)
+    } else {
+        linkedinItem.classList.add('opacity');
+        localStorage.removeItem('linkedin');
+    }
+}
+
+function addGithub() {
+    if (userGithub.value !== '') {
+        githubIcon.href = `http://github.com/${userGithub.value}`;
+        githubItem.classList.remove('opacity');
+        localStorage.setItem('github', userGithub.value)
+    } else {
+        githubItem.classList.add('opacity');
+        localStorage.removeItem('github');
+    }
+}
+
 userName.addEventListener('keyup', addName);
 userJob.addEventListener('keyup', addJob);
 userTel.addEventListener('keyup', addPhone);
-
-//email
-
-function addEmail() {
-    emailIcon.href = `mailto: ${userEmail.value}`;
-    emailItem.classList.remove('opacity');
-}
-
 userEmail.addEventListener('keyup', addEmail);
-
-//linkedin
-
-function addLinkedin() {
-    linkedinIcon.href = `${userLinkedin.value}`;
-    linkedinItem.classList.remove('opacity');
-}
 userLinkedin.addEventListener('keyup', addLinkedin);
-
-//github
-
-function addGithub() {
-    githubIcon.href = `http://github.com/${userGithub.value}`;
-    githubItem.classList.remove('opacity');
-}
 userGithub.addEventListener('keyup', addGithub);
 
