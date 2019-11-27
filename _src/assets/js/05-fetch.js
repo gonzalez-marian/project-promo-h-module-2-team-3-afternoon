@@ -5,7 +5,7 @@ function sendForm (event) {
 
 //creo json
  const datos = {
-    //"palette": ,
+    "palette": paletteChosen,
     "name": userName.value,
     "job": userJob.value,
     "phone": userTel.value,

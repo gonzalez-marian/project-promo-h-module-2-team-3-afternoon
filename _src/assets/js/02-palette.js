@@ -2,6 +2,22 @@
 
 //COLORS
 
+let paletteChosen = ''
+function choosePalette() {
+     paletteChosen = event.currentTarget.value;
+    if (palette1.checked) {
+        applyPalette1()
+    } else if (palette2.checked) {
+        applyPalette2()
+    } else if (palette3.checked) {
+        applyPalette3()
+    }
+}
+
+palette1.addEventListener('click', choosePalette)
+palette2.addEventListener('click', choosePalette)
+palette3.addEventListener('click', choosePalette)
+
 function applyPalette1() {
     previewCardName.classList.add('darkGreenBlue');
     previewCardName.classList.remove('driedBlood', 'slate');
@@ -15,7 +31,7 @@ function applyPalette1() {
         IconButton.style.borderColor = '#a2deaf';
     }
 }
-palette1.addEventListener('click', applyPalette1);
+//palette1.addEventListener('click', applyPalette1);
 
 
 function applyPalette2() {
@@ -31,7 +47,7 @@ function applyPalette2() {
         IconButton.style.borderColor = '#e95626';
     }
 }
-palette2.addEventListener('click', applyPalette2);
+//palette2.addEventListener('click', applyPalette2);
 
 
 function applyPalette3() {
@@ -47,4 +63,4 @@ function applyPalette3() {
         IconButton.style.borderColor = '#a0c0cf';
     }
 }
-palette3.addEventListener('click', applyPalette3);
+//palette3.addEventListener('click', applyPalette3);
