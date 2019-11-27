@@ -2,9 +2,9 @@
 
 //COLORS
 
-let paletteChosen = ''
+
 function choosePalette() {
-     paletteChosen = event.currentTarget.value;
+    paletteChosen = event.currentTarget.value;
     if (palette1.checked) {
         applyPalette1()
     } else if (palette2.checked) {

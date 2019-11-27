@@ -20,27 +20,39 @@ resetButton.addEventListener('click', resetInput)
 
 
 //INPUTS
-
-//nombre
-
 function addName() {
-    previewCardName.innerHTML = userName.value;
+    if (userName.value !== '') {
+        previewCardName.innerHTML = userName.value;
+        localStorage.setItem('name', userName.value)
+    } else {
+        previewCardName.innerHTML = "Nombre Apellido";
+        localStorage.removeItem('name');
+    }
 }
-userName.addEventListener('keyup', addName);
-
-//puesto
 
 function addJob() {
-    previewCardJob.innerHTML = userJob.value;
+    if (userJob.value !== '') {
+        previewCardJob.innerHTML = userJob.value;
+        localStorage.setItem('job', userJob.value)
+    } else {
+        previewCardJob.innerHTML = "Front-end developer";
+        localStorage.removeItem('job');
+    }
 }
-userJob.addEventListener('keyup', addJob);
-
-//telefono
 
 function addPhone() {
-    phoneIcon.href = `tel:${userTel.value}`;
-    phoneItem.classList.remove('opacity');
+    if (userTel.value !== '') {
+        phoneIcon.href = `tel:${userTel.value}`;
+        phoneItem.classList.remove('opacity');
+        localStorage.setItem('phone', userTel.value)
+    } else {
+        phoneItem.classList.add('opacity');
+        localStorage.removeItem('phone');
+    }
 }
+
+userName.addEventListener('keyup', addName);
+userJob.addEventListener('keyup', addJob);
 userTel.addEventListener('keyup', addPhone);
 
 //email
