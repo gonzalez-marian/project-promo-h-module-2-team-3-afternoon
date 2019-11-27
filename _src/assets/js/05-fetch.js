@@ -26,6 +26,9 @@ function sendForm (event) {
     .then (data => showURL(data))
     .catch(function(error) {console.log(error);});
 }
+function showTwitter (){
+  
+}
 function showTwitterSection (){
   twitterContainer.classList.remove('hidden');
 }
@@ -38,12 +41,11 @@ function shareTwitter(url){
 function showURL (data) {
   const twitterURL = document.createElement('span');
   if (data.success) {
-    twitterURL.innerHTML = `<a class="twitter-url" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
-    console.log(data.cardURL)
+    twitterURL.innerHTML = `<a class="twitter-url" href=${data.cardURL} style="color:#e17334" target="_blank">${data.cardURL}</a>`;
     twitterMessage.insertAdjacentElement('afterend', twitterURL);
     shareTwitter(data.cardURL);
     showTwitterSection();
-    //showTwitter();
+    showTwitter();
   } else {
     twitterURL.innerHTML = 'ERROR' + data.error;
   }
