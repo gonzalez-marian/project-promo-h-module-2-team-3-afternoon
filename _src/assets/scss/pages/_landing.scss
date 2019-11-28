@@ -113,6 +113,10 @@
     line-height: rem(22);
     text-align: center;
     padding: 10px;
+    &:hover{
+        transform: scale(1.05);
+        background-color: $dull-orange;
+    }
     @include for-tablet-up{
         margin: 186px 0 59px 0;
     }

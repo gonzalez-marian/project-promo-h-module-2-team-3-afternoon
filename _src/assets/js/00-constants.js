@@ -14,7 +14,7 @@ const share = document.querySelector('#share');
 const palette1 = document.querySelector('#fieldset__design--palette-1');
 const palette2 = document.querySelector('#fieldset__design--palette-2');
 const palette3 = document.querySelector('#fieldset__design--palette-3');
-
+let paletteChosen = '';
 
 const userName = document.querySelector('#name');
 const userJob = document.querySelector('#job-title');
@@ -22,6 +22,10 @@ const userEmail = document.querySelector('#email');
 const userTel = document.querySelector('#tel');
 const userLinkedin = document.querySelector('#linkedin');
 const userGithub = document.querySelector('#github');
+const createCardButton = document.querySelector('#createCardButton');
+const twitterContainer = document.querySelector('#twitterContainer');
+const twitterBtn = document.querySelector('#twitterBtn');
+const twitterMessage = document.querySelector('#twitterMessage');
 
 const resetButton = document.querySelector('.reset');
 
@@ -38,3 +42,4 @@ const linkedinItem = document.querySelector('.item_linkedin');
 const githubItem = document.querySelector('.item_github');
 const iconItems = document.querySelectorAll('#preview_card-icons');
 const iconButtons = document.querySelectorAll('.item_btn');
+
