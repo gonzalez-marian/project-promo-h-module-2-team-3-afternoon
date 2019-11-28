@@ -23,6 +23,8 @@ const userTel = document.querySelector('#tel');
 const userLinkedin = document.querySelector('#linkedin');
 const userGithub = document.querySelector('#github');
 const createCardButton = document.querySelector('#createCardButton');
+const twitterContainer = document.querySelector('#twitterContainer');
+const twitterBtn = document.querySelector('#twitterBtn');
 const twitterMessage = document.querySelector('#twitterMessage');
 
 const resetButton = document.querySelector('.reset');
