@@ -2,10 +2,30 @@
 
 //COLORS
 
-
+function getPalette() {
+    if (localStorage.getItem('palette')) {
+        paletteChosen = localStorage.getItem('palette');
+        if (paletteChosen === '1') {
+            palette1.setAttribute('checked', true);
+        } else if (paletteChosen === '2') {
+            palette2.setAttribute('checked', true);
+        } else {
+            palette3.setAttribute('checked', true);
+        }
+        applyPalette();
+    }
+    else {
+        palette1.setAttribute('checked', true);
+        applyPalette();
+    }
+}
 function choosePalette() {
     paletteChosen = event.currentTarget.value;
     localStorage.setItem('palette', paletteChosen);
+    applyPalette();
+}
+
+function applyPalette() {
     if (palette1.checked) {
         applyPalette1()
     } else if (palette2.checked) {
@@ -61,6 +81,3 @@ function applyPalette3() {
     }
 }
 
-// function getPalette() {
-
-// }

@@ -93,7 +93,7 @@ userGithub.addEventListener('keyup', addGithub);
 
 
 function getPersData() {
-    //getPalette();
+    getPalette();
     getName();
     getJob();
     getPhone();
