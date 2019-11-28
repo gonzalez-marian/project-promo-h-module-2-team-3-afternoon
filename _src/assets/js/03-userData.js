@@ -115,7 +115,7 @@ function getName() {
 function getJob() {
     if (localStorage.getItem('job')) {
         userJob.value = localStorage.getItem('job');
-        previewCardJob.innerHTML = localStorage.getItem('name');
+        previewCardJob.innerHTML = localStorage.getItem('job');
     }
     else {
         userJob.value = '';
