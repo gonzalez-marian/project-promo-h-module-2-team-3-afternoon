@@ -91,3 +91,80 @@ userEmail.addEventListener('keyup', addEmail);
 userLinkedin.addEventListener('keyup', addLinkedin);
 userGithub.addEventListener('keyup', addGithub);
 
+
+function getPersData() {
+    //getPalette();
+    getName();
+    getJob();
+    getPhone();
+    getEmail();
+    getLinkedin();
+    getGithub();
+}
+
+function getName() {
+    if (localStorage.getItem('name')) {
+        userName.value = localStorage.getItem('name');
+        previewCardName.innerHTML = localStorage.getItem('name');
+    }
+    else {
+        userName.value = '';
+    }
+}
+
+function getJob() {
+    if (localStorage.getItem('job')) {
+        userJob.value = localStorage.getItem('job');
+        previewCardJob.innerHTML = localStorage.getItem('name');
+    }
+    else {
+        userJob.value = '';
+    }
+}
+
+function getPhone() {
+    if (localStorage.getItem('phone')) {
+        userTel.value = localStorage.getItem('phone');
+        phoneIcon.href = `tel:${userTel.value}`;
+        phoneItem.classList.remove('opacity');
+    }
+    else {
+        userTel.value = '';
+    }
+}
+
+function getEmail() {
+    if (localStorage.getItem('email')) {
+        userEmail.value = localStorage.getItem('email');
+        emailIcon.href = `tel:${userEmail.value}`;
+        emailItem.classList.remove('opacity');
+    }
+    else {
+        userEmail.value = '';
+    }
+}
+
+function getLinkedin() {
+    if (localStorage.getItem('linkedin')) {
+        userLinkedin.value = localStorage.getItem('linkedin');
+        linkedinIcon.href = `tel:${userLinkedin.value}`;
+        linkedinItem.classList.remove('opacity');
+    }
+    else {
+        userLinkedin.value = '';
+    }
+}
+
+function getGithub() {
+    if (localStorage.getItem('github')) {
+        userGithub.value = localStorage.getItem('github');
+        githubIcon.href = `tel:${userGithub.value}`;
+        githubItem.classList.remove('opacity');
+    }
+    else {
+        userGithub.value = '';
+    }
+}
+
+
+window.addEventListener('load', getPersData);

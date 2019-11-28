@@ -5,6 +5,7 @@
 
 function choosePalette() {
     paletteChosen = event.currentTarget.value;
+    localStorage.setItem('palette', paletteChosen);
     if (palette1.checked) {
         applyPalette1()
     } else if (palette2.checked) {
@@ -31,8 +32,6 @@ function applyPalette1() {
         IconButton.style.borderColor = '#a2deaf';
     }
 }
-//palette1.addEventListener('click', applyPalette1);
-
 
 function applyPalette2() {
     previewCardName.classList.add('driedBlood');
@@ -47,8 +46,6 @@ function applyPalette2() {
         IconButton.style.borderColor = '#e95626';
     }
 }
-//palette2.addEventListener('click', applyPalette2);
-
 
 function applyPalette3() {
     previewCardName.classList.add('slate');
@@ -63,4 +60,7 @@ function applyPalette3() {
         IconButton.style.borderColor = '#a0c0cf';
     }
 }
-//palette3.addEventListener('click', applyPalette3);
+
+// function getPalette() {
+
+// }
