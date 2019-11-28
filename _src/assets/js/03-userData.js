@@ -1,24 +1,6 @@
 'use strict';
 
 
-
-//RESET
-
-function resetInput() {
-    previewCardName.innerHTML = 'Nombre Apellido';
-    previewCardJob.innerHTML = 'Front-end developer';
-    phoneIcon.href = '';
-    emailIcon.href = '';
-    linkedinIcon.href = '';
-    githubIcon.href = '';
-    phoneItem.classList.add('hidden');
-    emailItem.classList.add('hidden');
-    linkedinItem.classList.add('hidden');
-    githubItem.classList.add('hidden');
-};
-resetButton.addEventListener('click', resetInput)
-
-
 //INPUTS
 function addName() {
     if (userName.value !== '') {
