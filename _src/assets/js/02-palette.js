@@ -2,9 +2,30 @@
 
 //COLORS
 
-let paletteChosen = ''
+function getPalette() {
+    if (localStorage.getItem('palette')) {
+        paletteChosen = localStorage.getItem('palette');
+        if (paletteChosen === '1') {
+            palette1.setAttribute('checked', true);
+        } else if (paletteChosen === '2') {
+            palette2.setAttribute('checked', true);
+        } else {
+            palette3.setAttribute('checked', true);
+        }
+        applyPalette();
+    }
+    else {
+        palette1.setAttribute('checked', true);
+        applyPalette();
+    }
+}
 function choosePalette() {
-     paletteChosen = event.currentTarget.value;
+    paletteChosen = event.currentTarget.value;
+    localStorage.setItem('palette', paletteChosen);
+    applyPalette();
+}
+
+function applyPalette() {
     if (palette1.checked) {
         applyPalette1()
     } else if (palette2.checked) {
@@ -31,8 +52,6 @@ function applyPalette1() {
         IconButton.style.borderColor = '#a2deaf';
     }
 }
-//palette1.addEventListener('click', applyPalette1);
-
 
 function applyPalette2() {
     previewCardName.classList.add('driedBlood');
@@ -47,8 +66,6 @@ function applyPalette2() {
         IconButton.style.borderColor = '#e95626';
     }
 }
-//palette2.addEventListener('click', applyPalette2);
-
 
 function applyPalette3() {
     previewCardName.classList.add('slate');
@@ -63,4 +80,4 @@ function applyPalette3() {
         IconButton.style.borderColor = '#a0c0cf';
     }
 }
-//palette3.addEventListener('click', applyPalette3);
+
