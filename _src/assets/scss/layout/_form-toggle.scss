@@ -1,19 +1,38 @@
 .hidden{
-    display: none;
+    display: none; 
+}
+.opacity {
+    opacity: 0.6;
 }
 .main{
     background-image: linear-gradient(to bottom, #f5f5f5, $white-full 9%);
+    height: 80%;
 }
 
 .preview{
-    background-image: linear-gradient($silver , $pale-grey);
+    background: url('../images/leavesBackground.jpg') no-repeat;
+    background-size: cover;
     height: 80vh;
+    //overflow: hidden;
+    border: 3px solid $dark-green-blue;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     
+        
+    &_card-container{
+        height: 400px;
+        width: 270px;
+        border-radius: 8px;
+        background-color: $dark-green-blue-transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+
+    }
     .reset{
         width: 75px;
         height: 30px;
@@ -28,6 +47,10 @@
         line-height: 20px;
         color: $gunmetal;
         text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         &:hover {
             border: solid 2px $dark-green-blue;
             color: $dark-green-blue;
@@ -36,7 +59,7 @@
     }
     
     &_card{
-        margin: 20px auto 40px;
+        margin: 20px 30px 40px 30px;
         background-color: $white-full;
         width: 240px;
         height: 329px;
@@ -69,7 +92,12 @@
             margin-top: 2px;
             margin-bottom: 0px;
         }
-
+        &-image {
+            background: url('../images/portrait.jpg') top center no-repeat;
+            background-size: cover;
+            width: 240px;
+            height: 200px;
+        }
         &-social{
             display: flex;
             flex-direction: row;
@@ -108,19 +136,19 @@
 }
 .fieldset{
     border-bottom: 1px solid $white-two;
-    padding-bottom: 10px;
+    
 }
 .form_title-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    cursor: pointer;
 }
 .form_title{
     @include text-open-18-600;
     color: $gunmetal;
-    margin: 10px 0;
+    margin: 12px 0;
 
     &-icon{
         color: $dull-orange;
@@ -149,11 +177,16 @@
         display: inline-block;
     }
 }
-
+.palette-container{
+    padding-bottom: 10px;
+}
 #fieldset__design--{
     &palette-1, &palette-2, &palette-3{
         vertical-align: 30%;
     }
+}
+#github {
+    margin-bottom: 34px;
 }
 
 .palette1-{
@@ -203,6 +236,8 @@
 .preview-image{
     width: 30px;
     height: 30px;
+    background: top center no-repeat;
+    background-size: cover;
     border: solid 1px $hospital-green;
     display: inline-block;
     margin-left: 20px;
@@ -221,13 +256,19 @@
     &-btn{
         width: 199px;
         height: 50px;
-        margin: 25px 0px;
+        margin: 25px 0px 35px;
         border-radius: 12px;
         box-shadow: 0 1px 6px 0 $black-32;
         background-color: $dull-orange;
         color: $white-full;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.32);
+        }
         &:disabled{
             background-color: $black-32;
+            pointer-events: none;
         }
     }
 }
@@ -239,12 +280,13 @@
     border-bottom: 1px solid $white-two;
     &-message{
         margin-top: 20px;
+        margin-bottom: 10px;
         @include text-open-18-600;
         color: $gunmetal;
     }
     &-btn{
-        width: 181px;
-        height: 30px;
+        width: 185px;
+        height: 33px;
         display: block;
         padding-top: 5px;
         border-radius: 5px;
@@ -254,6 +296,9 @@
         color: #ffffff;
         text-align: center;
         margin: 20px auto 30px;
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 }
 
