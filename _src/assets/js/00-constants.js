@@ -27,7 +27,6 @@ const twitterContainer = document.querySelector('#twitterContainer');
 const twitterBtn = document.querySelector('#twitterBtn');
 const twitterMessage = document.querySelector('#twitterMessage');
 
-const resetButton = document.querySelector('.reset');
 
 const previewCardHead = document.querySelector('.preview_card-head');
 const previewCardName = document.querySelector('.preview_card-name');
