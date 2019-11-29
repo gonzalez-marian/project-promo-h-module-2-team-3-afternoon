@@ -1,5 +1,6 @@
 'use strict';
 
+const defaultImage = '../images/portrait.jpg';
 
 //INPUTS
 function addName() {
