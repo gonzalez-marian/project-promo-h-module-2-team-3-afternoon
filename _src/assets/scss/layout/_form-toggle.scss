@@ -10,10 +10,8 @@
 }
 
 .preview{
-    background: url('../images/backgroundLeaves.jpg') no-repeat;
+    background: url('../images/leavesBackground.jpg') no-repeat;
     background-size: cover;
-    //background-image: url("./assets/images/backgroundLeaves.jpg");
-    //background-image: linear-gradient($silver , $pale-grey);
     height: 80vh;
     //overflow: hidden;
     border: 3px solid $dark-green-blue;
@@ -95,7 +93,7 @@
             margin-bottom: 0px;
         }
         &-image {
-            background: url('../images/monkey.jpg') top center no-repeat;
+            background: url('../images/portrait.jpg') top center no-repeat;
             background-size: cover;
             width: 240px;
             height: 200px;
