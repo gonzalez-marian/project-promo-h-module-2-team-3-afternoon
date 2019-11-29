@@ -96,6 +96,7 @@ function getPersData() {
     getPalette();
     getName();
     getJob();
+    getProfileImage();
     getPhone();
     getEmail();
     getLinkedin();
@@ -119,6 +120,19 @@ function getJob() {
     }
     else {
         userJob.value = '';
+    }
+}
+
+function getProfileImage() {
+    if (localStorage.getItem('image')) {
+        profileImage.src = localStorage.getItem('image');
+        profileImage.style.backgroundImage = `url(${localStorage.getItem('image')})`;
+        profilePreview.style.backgroundImage = `url(${localStorage.getItem('image')})`;
+    }
+    else {
+        profilePreview.src = defaultImage;
+        profileImage.style.backgroundImage = `url(${defaultImage})`;
+        profilePreview.style.backgroundImage = `url(${defaultImage})`;
     }
 }
 
