@@ -74,7 +74,7 @@
     align-items: center;  
     .ldng-icon {
         color: $dull-orange;
-        height: 26px;
+        font-size: rem(28);
         @include for-tablet-up{
             height: 29px;
         }
